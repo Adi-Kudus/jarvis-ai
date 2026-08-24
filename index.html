@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>JARVIS AI ◈ Autonomous Superagent & Enterprise AI Governance System v8.0</title>
-<meta name="description" content="JARVIS AI v8.0 Superagent & AI Governance System by Ir. Mohamad Hartadi. Integrated 10-Pillars AI Governance, 3D Holographic AI Brain, Neural Network, Cybersecurity Shield, Audit Trail, Bias Analytics, HITL, Red Team Simulator, and 45+ Engineering Apps.">
+<title>JARVIS AI ◈ Autonomous Superagent & Adaptive Multi-OS Cyber Sentinel v8.5</title>
+<meta name="description" content="JARVIS AI v8.5 Superagent, AI Governance & Adaptive Multi-OS Cyber Sentinel by Ir. Mohamad Hartadi. Integrated 10-Pillars AI Governance, 3D Holographic AI Brain, Multi-OS Antivirus Engine (Android, iOS, iPadOS, macOS, Linux, Windows, HarmonyOS), Neural Network, Cybersecurity Shield, Audit Trail, Bias Analytics, HITL, Red Team Simulator, and 45+ Engineering Apps.">
 <meta name="keywords" content="JARVIS AI, AI Governance, NIST AI RMF, EU AI Act, Model Card, Red Teaming, Bias Analytics, Human in the Loop, Mohamad Hartadi, Geotechnical AI, Civil Engineering">
 <meta name="author" content="Ir. Mohamad Hartadi">
 <meta name="theme-color" content="#000814">
@@ -1219,7 +1219,7 @@ html, body {
 
 .module-tabs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   margin-bottom: 8px;
 }
@@ -2259,7 +2259,7 @@ body {
     padding: 5px 10px;
   }
   .module-tabs-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4px;
   }
   .mod-tab-btn {
@@ -2338,6 +2338,162 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================================
+   ANTIVIRUS DYNAMIC ANIMATIONS (STANDBY, SCANNING, THREAT LOCK, DISINTEGRATE)
+   ========================================================================= */
+
+@keyframes radarSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes radarPing {
+  0% { transform: scale(0.2); opacity: 1; border-color: var(--neon-green); }
+  100% { transform: scale(1.6); opacity: 0; border-color: transparent; }
+}
+
+@keyframes shieldGlowPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0, 245, 212, 0.4)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(0, 245, 212, 0.8)); }
+}
+
+@keyframes threatPulse {
+  0%, 100% { border-color: var(--neon-red); box-shadow: 0 0 15px rgba(255, 71, 87, 0.3); }
+  50% { border-color: #ff0033; box-shadow: 0 0 30px rgba(255, 71, 87, 0.8); }
+}
+
+@keyframes laserSweepDown {
+  0% { top: 0%; opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0.2; }
+}
+
+@keyframes zapPurge {
+  0% { transform: scale(1); filter: brightness(1); }
+  30% { transform: scale(1.02); filter: brightness(2) drop-shadow(0 0 20px #ff0055); background: rgba(255, 0, 85, 0.3); }
+  70% { transform: scale(0.98); filter: brightness(1.5) drop-shadow(0 0 15px var(--neon-green)); background: rgba(0, 245, 212, 0.2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.av-standby-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
+  background: radial-gradient(circle at center, rgba(0, 30, 60, 0.6) 0%, rgba(0, 8, 18, 0.85) 75%);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.av-standby-shield-box {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.av-standby-shield-icon {
+  font-size: 46px;
+  color: var(--neon-green);
+  animation: shieldGlowPulse 3s ease-in-out infinite;
+  z-index: 5;
+}
+
+.av-standby-ring-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed rgba(0, 245, 212, 0.35);
+  animation: radarSpin 10s linear infinite;
+}
+
+.av-standby-ring-inner {
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-top-color: transparent;
+  animation: radarSpin 6s linear infinite reverse;
+}
+
+.av-ping-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--neon-green);
+  animation: radarPing 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.threat-intercept-card {
+  background: rgba(40, 0, 10, 0.85) !important;
+  border: 1px solid var(--neon-red) !important;
+  animation: threatPulse 1s ease-in-out infinite !important;
+}
+
+.disintegrating-row {
+  animation: zapPurge 0.8s ease-in-out forwards !important;
+}
+
+
+/* Cyber Sentinel Advanced Threat Inspector & Decoy Styles */
+.av-metric-badge {
+  background: rgba(0, 20, 40, 0.7);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.av-feed-stream {
+  font-family: var(--font-code);
+  font-size: 11px;
+  line-height: 1.5;
+  color: #38bdf8;
+  background: rgba(0, 8, 20, 0.85);
+  border-radius: 8px;
+  padding: 10px;
+  height: 90px;
+  overflow-y: hidden;
+  border: 1px solid rgba(0, 242, 254, 0.15);
+}
+
+.av-hex-viewer {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: #a5f3fc;
+  background: #010814;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 6px;
+  padding: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+  white-space: pre;
+}
+
+.threat-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.threat-tag.mitre { background: rgba(157, 78, 221, 0.2); color: #d8b4fe; border: 1px solid var(--neon-purple); }
+.threat-tag.entropy { background: rgba(247, 183, 49, 0.2); color: var(--neon-amber); border: 1px solid var(--neon-amber); }
+
 </style>
 </head>
 <body>
@@ -3263,6 +3419,14 @@ function playSfx(type) {
       gain.gain.linearRampToValueAtTime(0.001, now + 0.15);
       osc.start(now);
       osc.stop(now + 0.15);
+    } else if (type === 'laser') {
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(1200, now);
+      osc.frequency.exponentialRampToValueAtTime(120, now + 0.25);
+      gain.gain.setValueAtTime(0.18, now);
+      gain.gain.linearRampToValueAtTime(0.001, now + 0.25);
+      osc.start(now);
+      osc.stop(now + 0.25);
     } else if (type === 'alert') {
       osc.type = 'sawtooth';
       osc.frequency.setValueAtTime(880, now);
@@ -4138,6 +4302,36 @@ async function handleSendMessage() {
     return;
   }
 
+  
+  // Antivirus natural language commands
+  if (qLower.includes('scan virus') || qLower.includes('antivirus') || qLower.includes('scan hp') || qLower.includes('scan smartphone') || qLower.includes('scan tablet') || qLower.includes('scan android') || qLower.includes('scan ipad') || qLower.includes('scan mac') || qLower.includes('scan linux') || qLower.includes('scan windows')) {
+    let targetKey = 'auto';
+    if (qLower.includes('hp') || qLower.includes('smartphone') || qLower.includes('android')) targetKey = 'android';
+    else if (qLower.includes('ipad') || (qLower.includes('tablet') && qLower.includes('apple'))) targetKey = 'ipados';
+    else if (qLower.includes('tablet')) targetKey = 'android';
+    else if (qLower.includes('iphone') || qLower.includes('ios')) targetKey = 'ios';
+    else if (qLower.includes('mac') || qLower.includes('macintosh') || qLower.includes('macbook')) targetKey = 'macos';
+    else if (qLower.includes('linux') || qLower.includes('ubuntu')) targetKey = 'linux';
+    else if (qLower.includes('windows') || qLower.includes('pc') || qLower.includes('laptop')) targetKey = 'windows';
+
+    if (targetKey !== 'auto') {
+      currentTargetOS = targetKey;
+    }
+    openModal('antivirusModal');
+    switchAvTab('scan');
+    const prof = getActiveOSProfile();
+    startQuickScan();
+    appendRichAIBubble(
+      `Cyber Sentinel Antivirus: ${prof.displayName}`,
+      `Memulai pemindaian sistem secara adaptif untuk target **${prof.displayName}** (${prof.badgeText}).\n• Target Storage: \`${prof.storageTarget}\`\n• Mesin Heuristik: Real-Time Zero-Day Guard aktif.`,
+      [
+        { label: "Buka Konsol Antivirus", url: "javascript:openModal('antivirusModal')", icon: "fa-shield-virus", cls: "gov" }
+      ]
+    );
+    speakJARVIS(`Memulai pemindaian sistem antivirus untuk ${prof.displayName}.`);
+    return;
+  }
+
   if (qLower.includes('screensaver') || qLower.includes('screen saver')) {
     activateScreensaver();
     return;
@@ -4880,7 +5074,7 @@ function renderGovTabContent(tabId) {
 
         <div style="margin-top: 14px;">
           <div style="font-family: var(--font-hud); font-size: 14px; color: var(--cyan); margin-bottom: 6px;">STRUKTUR TIM RESPONS KRISIS (RACI MATRIX)</div>
-          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; font-size: 12.5px;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; font-size: 12.5px;">
             <div style="background: rgba(0,20,40,0.6); padding: 8px; border-radius: 6px;">
               <b style="color:var(--cyan);">1. Legal Counsel</b><br>Klarifikasi regulasi & notifikasi Kominfo/BSSN dalam 72 jam.
             </div>
@@ -5417,21 +5611,26 @@ async function renderSidebarToolContent() {
   const container = document.getElementById('sidebarToolContent');
   if (!container) return;
 
-    if (currentSidebarTool === 'antivirus') {
+  const prof = getActiveOSProfile();
+  const detected = detectCurrentPlatform();
+
+  if (currentSidebarTool === 'antivirus') {
     container.innerHTML = `
-      <div style="font-family: var(--font-hud); font-size: 14px; color: var(--neon-green); margin-bottom: 6px;">ANTIVIRUS & DRIVE SHIELD</div>
+      <div style="font-family: var(--font-hud); font-size: 13.5px; color: ${prof.color}; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+        <i class="${prof.icon}"></i> ANTIVIRUS: ${prof.displayName.toUpperCase()}
+      </div>
       <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
-        <div style="display: flex; justify-content: space-between;"><span>Status Proteksi:</span><b style="color:var(--neon-green)">AKTIF (Real-Time)</b></div>
-        <div style="display: flex; justify-content: space-between;"><span>Database Virus:</span><b style="color:var(--cyan)">4.8M Global Signatures</b></div>
-        <div style="display: flex; justify-content: space-between;"><span>Behavioral Engine:</span><b style="color:var(--neon-purple)">Zero-Day Active</b></div>
-        <div style="padding: 6px; background: rgba(0,245,212,0.1); border-radius: 6px; font-size: 12.5px; margin-top: 4px;">
-          <i class="fa-solid fa-shield-halved" style="color:var(--neon-green);"></i> Drive C: & D: Terlindungi dari Ransomware.
+        <div style="display: flex; justify-content: space-between;"><span>Status Target:</span><b style="color:${prof.color}">${prof.badgeText}</b></div>
+        <div style="display: flex; justify-content: space-between;"><span>Proteksi:</span><b style="color:var(--neon-green)">AKTIF (Real-Time)</b></div>
+        <div style="display: flex; justify-content: space-between;"><span>Database:</span><b style="color:var(--cyan)">4.8M Signatures</b></div>
+        <div style="padding: 6px; background: rgba(0,245,212,0.1); border-radius: 6px; font-size: 12px; margin-top: 4px;">
+          <i class="fa-solid fa-shield-halved" style="color:var(--neon-green);"></i> Target: <b>${prof.storageTarget}</b>.
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 4px;">
-          <button class="nav-btn av-shield" style="justify-content: center; padding: 5px; font-size: 12.5px;" onclick="openModal('antivirusModal'); switchAvTab('scan');">QUICK SCAN</button>
-          <button class="nav-btn av-shield" style="justify-content: center; padding: 5px; font-size: 12.5px;" onclick="openModal('antivirusModal'); triggerFolderPicker();">SCAN FOLDER</button>
+          <button class="nav-btn av-shield" style="justify-content: center; padding: 5px; font-size: 12px;" onclick="openModal('antivirusModal'); switchAvTab('scan'); startQuickScan();">QUICK SCAN</button>
+          <button class="nav-btn av-shield" style="justify-content: center; padding: 5px; font-size: 12px;" onclick="openModal('antivirusModal'); switchAvTab('scan'); triggerFolderPicker();">SCAN FOLDER</button>
         </div>
-        <button class="nav-btn" style="justify-content: center; padding: 5px; font-size: 13px; margin-top: 2px;" onclick="openModal('antivirusModal')">BUKA KONSOL ANTIVIRUS LENGKAP</button>
+        <button class="nav-btn" style="justify-content: center; padding: 6px; font-size: 13px; margin-top: 2px;" onclick="openModal('antivirusModal')">BUKA KONSOL ANTIVIRUS LENGKAP</button>
       </div>
     `;
   } else if (currentSidebarTool === 'gov') {
@@ -5597,13 +5796,17 @@ async function renderSidebarToolContent() {
     `;
   } else if (currentSidebarTool === 'sys') {
     container.innerHTML = `
-      <div style="font-family: var(--font-hud); font-size: 14px; color: var(--cyan); margin-bottom: 6px;">DIAGNOSTIK BROWSER & HARDWARE</div>
-      <div style="display: flex; flex-direction: column; gap: 4px; font-size: 13px;">
-        <div>• <b>Platform:</b> ${navigator.userAgent.includes('Win') ? 'Windows' : navigator.userAgent.includes('Mac') ? 'macOS' : 'Linux/Android'}</div>
-        <div>• <b>Layar:</b> ${window.innerWidth} x ${window.innerHeight} px</div>
-        <div>• <b>WebGL:</b> Didukung (Three.js 3D Active)</div>
-        <div>• <b>Speech API:</b> ${window.speechSynthesis ? 'Ready' : 'Unavailable'}</div>
-        <div>• <b>Core Threads:</b> ${navigator.hardwareConcurrency || 8} Logical Cores</div>
+      <div style="font-family: var(--font-hud); font-size: 14px; color: var(--cyan); margin-bottom: 6px;">DIAGNOSTIK SISTEM & PERANGKAT</div>
+      <div style="display: flex; flex-direction: column; gap: 5px; font-size: 13px;">
+        <div>• <b>Perangkat:</b> <span style="color:#fff;">${detected.device}</span></div>
+        <div>• <b>Sistem Aktif:</b> <span style="color:${prof.color}; font-weight:700;">${prof.displayName}</span></div>
+        <div>• <b>Arsitektur CPU:</b> ${detected.arch}</div>
+        <div>• <b>Target Storage:</b> <span style="color:var(--cyan);">${prof.storageTarget}</span></div>
+        <div>• <b>Dimensi Layar:</b> ${window.innerWidth} x ${window.innerHeight} px (${window.innerWidth < 768 ? 'Smartphone' : window.innerWidth <= 1024 ? 'Tablet / iPad' : 'Desktop / Laptop'})</div>
+        <div>• <b>Touch Interaction:</b> ${navigator.maxTouchPoints > 0 ? `Ya (${navigator.maxTouchPoints} Touch Points)` : 'Mouse / Trackpad'}</div>
+        <div>• <b>WebGL 3D Engine:</b> Online (Three.js 3D Holographic)</div>
+        <div>• <b>Speech Recognition:</b> ${window.SpeechRecognition || window.webkitSpeechRecognition ? 'Ready (Indonesian Siri)' : 'Standard TTS'}</div>
+        <div>• <b>Logical Cores:</b> ${navigator.hardwareConcurrency || 8} Core Threads</div>
       </div>
     `;
   }
@@ -5720,6 +5923,12 @@ function openModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
     modal.classList.add('active');
+    if (id === 'antivirusModal') {
+      switchAvTab(currentAvTab || 'scan');
+    }
+    if (id === 'govModal') {
+      switchGovTab(currentGovTab || 'm01');
+    }
     if (id === 'appsModal') renderAppsGrid(appsList);
     if (id === 'voiceModal') populateVoiceOptions();
     if (id === 'settingsModal') {
@@ -5860,43 +6069,561 @@ function setWindyLayer(layer) {
 
 
 /* =========================================================================
-   JARVIS CYBER SENTINEL ANTIVIRUS PRO & BEHAVIORAL THREAT ENGINE
+   JARVIS CYBER SENTINEL ANTIVIRUS PRO ◈ MULTI-OS & BEHAVIORAL THREAT ENGINE
+   Supports: Android, iOS/iPadOS, macOS (Macintosh), Linux, & Windows
    ========================================================================= */
 
 let currentAvTab = 'scan';
+let currentTargetOS = 'auto'; // 'auto', 'android', 'ios', 'ipados', 'macos', 'linux', 'windows'
 
-// Database Virus di Seluruh Dunia (Global Threat Intelligence Catalog)
+// Multi-OS & Device Detection Function
+function detectCurrentPlatform() {
+  const ua = (navigator.userAgent || "").toLowerCase();
+  const platform = (navigator.platform || "").toLowerCase();
+  const maxTouch = navigator.maxTouchPoints || 0;
+  const width = window.innerWidth;
+  const isTouch = ('ontouchstart' in window) || maxTouch > 0;
+
+  // Check iPadOS (iPad on Safari identifies as Macintosh with touch points)
+  if (/ipad/.test(ua) || (/macintosh/.test(ua) && maxTouch > 1) || /ipados/.test(ua)) {
+    return { os: 'ipados', device: 'Tablet (iPad)', arch: 'Apple Silicon (ARM64)' };
+  }
+  // Check iPhone / iPod / iOS
+  if (/iphone|ipod/.test(ua)) {
+    return { os: 'ios', device: 'Smartphone (iPhone)', arch: 'Apple Silicon (ARM64)' };
+  }
+  // Check Android (Smartphone / Tablet)
+  if (/android/.test(ua) || (/mobile/.test(ua) && !/windows/.test(ua) && isTouch)) {
+    const isTablet = (width >= 600 && width <= 1024) || /tablet/i.test(ua);
+    return { os: 'android', device: isTablet ? 'Tablet (Android)' : 'Smartphone (Android)', arch: 'ARM64-v8a' };
+  }
+  // Check macOS / Macintosh
+  if (/macintosh|mac os x/.test(ua) && maxTouch <= 1) {
+    return { os: 'macos', device: 'Macintosh Laptop/Desktop', arch: 'Apple Silicon / Intel x86_64' };
+  }
+  // Check Linux
+  if (/linux/.test(platform) && !/android/.test(ua)) {
+    return { os: 'linux', device: 'Linux Workstation/Server', arch: 'x86_64 / aarch64' };
+  }
+  // Check Windows
+  if (/win/.test(platform) || /windows/.test(ua)) {
+    const isTablet = (width <= 1024 && isTouch);
+    return { os: 'windows', device: isTablet ? 'Tablet (Windows)' : 'PC / Laptop (Windows)', arch: 'x86_64 / ARM64' };
+  }
+
+  // Fallback based on screen width
+  if (width <= 767) {
+    return { os: 'android', device: 'Smartphone (Mobile)', arch: 'ARM64-v8a' };
+  } else if (width <= 1024 && isTouch) {
+    return { os: 'android', device: 'Tablet (Mobile)', arch: 'ARM64-v8a' };
+  }
+  return { os: 'windows', device: 'PC / Desktop', arch: 'x86_64' };
+}
+
+function getActiveOS() {
+  if (currentTargetOS === 'auto') {
+    return detectCurrentPlatform().os;
+  }
+  return currentTargetOS;
+}
+
+function getActiveOSProfile() {
+  const osKey = getActiveOS();
+  return osProfiles[osKey] || osProfiles.android;
+}
+
+function setTargetOS(osKey) {
+  playSfx('click');
+  currentTargetOS = osKey;
+  renderAvTabContent(currentAvTab);
+  if (currentSidebarTool === 'antivirus' || currentSidebarTool === 'sys') {
+    renderSidebarToolContent();
+  }
+  const prof = getActiveOSProfile();
+  speakJARVIS(`Mode target antivirus disesuaikan ke sistem ${prof.displayName}.`);
+}
+
+// OS Profiles & Ecosystem Configurations
+const osProfiles = {
+  android: {
+    key: 'android',
+    displayName: 'Android OS (Smartphone / Tablet)',
+    icon: 'fa-brands fa-android',
+    color: 'var(--neon-green)',
+    badgeText: 'ANDROID 15 (ARM64-v8a)',
+    storageTarget: 'Internal Storage (/storage/emulated/0) & /data/app',
+    quickScanTitle: 'QUICK SCAN (ANDROID SYSTEM & APKs)',
+    fullScanTitle: 'FULL STORAGE SCAN (/storage/emulated/0 & /data)',
+    customFolderTitle: 'SCAN FOLDER INTERNAL...',
+    customFileTitle: 'SCAN FILE / APK...',
+    dropzoneHint: 'Mendukung pemindaian paket Android (.apk, .dex, .so), dokumen (.pdf, .docx, .zip), dan folder internal /storage/emulated/0.',
+    shieldDesc: 'Storage internal /storage/emulated/0 & APK App Sandbox Terlindungi dari Ransomware & Malware Dropper.',
+    quickFiles: [
+      "/system/bin/app_process64",
+      "/system/priv-app/SystemUI/SystemUI.apk",
+      "/data/app/com.android.chrome/base.apk",
+      "/storage/emulated/0/Download/update_patch.apk",
+      "/data/data/com.android.providers.downloads/cache/",
+      "/system/lib64/libc.so",
+      "/system/framework/boot-framework.oat",
+      "/data/system/packages.xml",
+      "/storage/emulated/0/Android/data/com.whatsapp/",
+      "/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1",
+      "/storage/emulated/0/DCIM/Camera/IMG_20260824.jpg",
+      "/system/etc/security/cacerts/c76da351.0"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/system/app/GoogleServicesFramework/GoogleServicesFramework.apk",
+        "/data/app/com.banking.secure/base.apk",
+        "/storage/emulated/0/DCIM/Camera/IMG_20260824_",
+        "/storage/emulated/0/Documents/WayApu_Dam_Geotech_",
+        "/data/user/0/com.jarvis.ai/databases/audit_trail_",
+        "/storage/emulated/0/Download/seismic_data_",
+        "/system/framework/arm64/boot.oat",
+        "/vendor/lib64/libvulkan.so",
+        "/data/local/tmp/sandbox_worker_",
+        "/storage/emulated/0/Android/media/com.whatsapp/Audio_"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(p.endsWith('_') ? `${p}${i}.dat` : `${p}?v=${i}`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "AND-01", name: "Accessibility Service Abuse Watcher", trigger: "Aplikasi pihak ketiga meminta izin aksesibilitas untuk klik otomatis & keylog", action: "REVOKE_PERMISSION & KILL_SERVICE", status: "PROTECTED" },
+      { id: "AND-02", name: "Overlay & Screen Infiltration Watcher", trigger: "Window SYSTEM_ALERT_WINDOW transparan menutupi aplikasi perbankan", action: "BLOCK_OVERLAY_WINDOW", status: "ACTIVE" },
+      { id: "AND-03", name: "APK Sideload & Dropper Interceptor", trigger: "Aplikasi tak dikenal mengunduh dan mengeksekusi instalasi APK di latar belakang", action: "BLOCK_PACKAGE_INSTALL", status: "ACTIVE" },
+      { id: "AND-04", name: "SMS/OTP Hijacking & Notification Sniffer", trigger: "Thread latar belakang mencoba membaca SMS inbox untuk mencuri kode OTP 2FA", action: "ISOLATE_APP_SANDBOX", status: "INTERCEPTED" },
+      { id: "AND-05", name: "Unauthorized Camera & Mic Polling", trigger: "Akses hardware audio/kamera aktif tanpa indikator status bar foreground", action: "SEVER_SENSOR_STREAM", status: "ACTIVE" },
+      { id: "AND-06", name: "Root / Magisk Privilege Escalation Guard", trigger: "Upaya eksekusi binary su atau remount partisi /system sebagai Read-Write", action: "BLOCK_ROOT_ESCALATION", status: "PROTECTED" }
+    ],
+    threatSignatures: [
+      { name: "SharkBot", family: "Trojan-Banker.AndroidOS.SharkBot", cve: "CWE-200 (ATS Abuse)", sev: "Critical", desc: "Overlay injeksi canggih yang mencuri kredensial 230+ aplikasi perbankan.", hash: "4a82b910c2834e91823bc019284ef928" },
+      { name: "Pegasus Mobile", family: "Spyware.AndroidOS.Pegasus", cve: "CVE-2023-41064 (Zero-Click)", sev: "Critical", desc: "Spyware canggih yang menyusup ke mikrofon, GPS, pesan WhatsApp & Telegram.", hash: "3e98ac12049bf9283c74901c8273bd91" },
+      { name: "FluBot / Cabassous", family: "Trojan.AndroidOS.FluBot", cve: "ATT&CK T1437 (SMS Spreader)", sev: "Critical", desc: "Menyebar via SMS paket/kurir palsu dan mencuri data kontak serta perbankan.", hash: "991e2b8374a01c89de273b7492c1094f" },
+      { name: "Goldoson SDK", family: "Malware.Android.Goldoson", cve: "ATT&CK T1407", sev: "High", desc: "Pustaka SDK berbahaya yang tersembunyi di dalam 60+ aplikasi Google Play.", hash: "d6f49a37e408848d5d4d3a82928c03e1" },
+      { name: "Anatsa / Teabot", family: "Trojan-Banker.AndroidOS.Teabot", cve: "CWE-284 (Screen Mirror)", sev: "Critical", desc: "Trojan perbankan yang memanfaatkan VNC live streaming layar pengguna.", hash: "7b4892c019283e74892bc012984ef928" },
+      { name: "FakeApp E-Tilang", family: "Trojan-Dropper.AndroidOS.Agent.APK", cve: "Phishing SMS APK", sev: "High", desc: "Aplikasi kurir/surat tilang palsu yang membaca SMS OTP perbankan.", hash: "5c842b1029c490aef92bc10293cba41e" }
+    ],
+    quarantineVault: [
+      { id: "Q-AND-801", file: "/storage/emulated/0/Download/surat_tilang_online.apk", threat: "Trojan-Dropper.AndroidOS.Agent (Fake APK SMS)", date: "2026-08-24 07:15", sev: "Critical", status: "QUARANTINED" },
+      { id: "Q-AND-802", file: "/data/app/com.free.battery.booster/base.apk", threat: "Adware.AndroidOS.HiddenApp.Aggressive", date: "2026-08-23 21:40", sev: "High", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI OVERLAY & SCREEN LOCKER", log: "[OVERLAY_ATTACK] App com.fake.cleaner attempting SYSTEM_ALERT_WINDOW full screen hijack\\n[RULE: AND-02] Invisible overlay over Mobile Banking detected\\n[MITIGATION] Overlay window DESTROYED ◈ App permissions REVOKED.\\n[STATUS] ANDROID ENDPOINT SECURE ◈ Zero Credentials Compromised." },
+      injection: { title: "UJI ACCESSIBILITY ABUSE", log: "[ACCESSIBILITY_INTERCEPT] App com.sms.reader requesting Accessibility Event Dispatch\\n[RULE: AND-01] Automated button click simulation pattern MATCHED\\n[MITIGATION] Accessibility binding SEVERED ◈ App isolated in sandbox.\\n[STATUS] INJECTION BLOCKED ◈ Touch Dispatch Protected." },
+      keylogger: { title: "UJI SMS OTP SNIFFER", log: "[SMS_SNIFFER] Background broadcast receiver attempting Telephony.SMS_RECEIVED sniffer\\n[RULE: AND-04] OTP verification code exfiltration attempt DETECTED\\n[MITIGATION] SMS broadcast packet FILTERED ◈ Receiver process TERMINATED.\\n[STATUS] OTP CODE PROTECTED ◈ Banking Safe." },
+      revshell: { title: "UJI APK DROPPER & C2", log: "[DROPPER_WATCHER] App attempting silent install via /data/local/tmp/payload.apk\\n[RULE: AND-03] Untrusted package installer execution BLOCKED\\n[MITIGATION] Sideload package quarantined ◈ C2 socket severed.\\n[STATUS] MALICIOUS APK NEUTRALIZED." }
+    }
+  },
+
+  ipados: {
+    key: 'ipados',
+    displayName: 'Apple iPadOS (iPad Tablet)',
+    icon: 'fa-brands fa-apple',
+    color: '#38bdf8',
+    badgeText: 'iPadOS 18.2 (Apple M4 ARM64)',
+    storageTarget: 'APFS Secure Container (/var/mobile & /System/Library)',
+    quickScanTitle: 'QUICK SCAN (iPadOS APFS CONTAINERS)',
+    fullScanTitle: 'FULL APFS STORAGE SCAN (/var/mobile & Sandboxes)',
+    customFolderTitle: 'SCAN CONTAINER / SANDBOX...',
+    customFileTitle: 'SCAN FILE / PROFILE...',
+    dropzoneHint: 'Mendukung pemindaian configuration profiles (.mobileconfig), web cache, IPA container, dan media sandbox iPadOS.',
+    shieldDesc: 'APFS Secure Container /var/mobile & Keychain Terlindungi dari Exploit & Zero-Click Spyware.',
+    quickFiles: [
+      "/System/Library/CoreServices/SpringBoard.app/SpringBoard",
+      "/var/mobile/Containers/Data/Application/MobileSafari/Data/",
+      "/System/Library/Frameworks/WebKit.framework/WebKit",
+      "/private/var/mobile/Library/SMS/sms.db",
+      "/System/Library/PrivateFrameworks/MobileWiFi.framework",
+      "/var/mobile/Media/DCIM/100APPLE/",
+      "/System/Library/Caches/com.apple.dyld/dyld_shared_cache_arm64e",
+      "/var/mobile/Library/Preferences/com.apple.security.plist",
+      "/Applications/MobileSafari.app/MobileSafari",
+      "/usr/lib/libsystem_kernel.dylib",
+      "/var/mobile/Library/ConfigurationProfiles/CloudConfig.plist"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/var/mobile/Containers/Shared/AppGroup/group.com.apple.notes/",
+        "/var/mobile/Media/PhotoData/Photos.sqlite",
+        "/private/var/mobile/Library/Keychains/keychain-2.db",
+        "/System/Library/PrivateFrameworks/AppleAccount.framework",
+        "/var/mobile/Library/Caches/com.apple.WebKit.WebContent/",
+        "/System/Library/CoreServices/SafariViewService.app",
+        "/var/mobile/Containers/Data/Application/GeotechApp/Documents/"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(`${p}chunk_${i}.apfs`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "IOS-01", name: "Sandbox Escape & WebKit JIT Exploit Guard", trigger: "Thread WebContent mencoba melompat ke luar App Sandbox", action: "FREEZE_CONTAINER & RESTART_PAGE", status: "ACTIVE" },
+      { id: "IOS-02", name: "Zero-Click BlastDoor iMessage Guard", trigger: "Malformed image/attachment payload terdeteksi di BlastDoor parser", action: "DROP_MALFORMED_PACKET", status: "PROTECTED" },
+      { id: "IOS-03", name: "Malicious MDM & Provisioning Profile Guard", trigger: "Pemasangan profil sertifikat root SSL tidak terpercaya", action: "PROHIBIT_PROFILE_INSTALL", status: "ACTIVE" },
+      { id: "IOS-04", name: "Pegasus / Predator Spyware Watcher", trigger: "Proses latar belakang mencoba mengakses CoreTelephony & Audio stream", action: "REVOKE_MICROPHONE_STREAM", status: "ACTIVE" },
+      { id: "IOS-05", name: "Unauthorized Keychain Extraction Interceptor", trigger: "Aplikasi membaca item kSecClassGenericPassword tanpa entitlement resmi", action: "LOCK_SECURE_ENCLAVE", status: "PROTECTED" },
+      { id: "IOS-06", name: "Kernel Memory Patch & PPL Bypass Guard", trigger: "Upaya memodifikasi Page Protection Layer (PPL) pada memori kernel", action: "RESTORE_PPL_PROTECTION", status: "PROTECTED" }
+    ],
+    threatSignatures: [
+      { name: "Pegasus Zero-Click", family: "Spyware.iOS.Pegasus", cve: "CVE-2023-41064 (ImageIO)", sev: "Critical", desc: "Spyware militer yang menyusup tanpa interaksi klik pengguna via iMessage.", hash: "3e98ac12049bf9283c74901c8273bd91" },
+      { name: "GoldPickaxe iOS", family: "Trojan.iOS.GoldPickaxe", cve: "MDM Profile Abuse", sev: "Critical", desc: "Mencuri data pemindaian wajah biometrik FaceID dan dokumen identitas.", hash: "7c19283bc9281749283bc92817492838" },
+      { name: "Fugu15 Kernel Exploit", family: "Exploit.iOS.Fugu15", cve: "CVE-2022-46689", sev: "High", desc: "Eksploitasi kernel MacDirtyCOW untuk bypass pembatasan sandbox.", hash: "84c82835a5d21bbcf75a61706d8ab549" },
+      { name: "Pirrit iOS Adware", family: "Adware.iOS.Pirrit", cve: "Safari Profile Hijack", sev: "Medium", desc: "Menyuntikkan bookmark dan profil konfigurasi iklan di Safari browser.", hash: "d6f49a37e408848d5d4d3a82928c03e1" }
+    ],
+    quarantineVault: [
+      { id: "Q-IOS-701", file: "/var/mobile/Library/ConfigurationProfiles/untrusted_proxy.mobileconfig", threat: "Profile.Malicious.MDM.TrafficInterceptor", date: "2026-08-24 06:30", sev: "High", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI SANDBOX ESCAPE WEBKIT", log: "[SANDBOX_ATTACK] WebContent process PID #1092 attempting Mach port traversal\\n[RULE: IOS-01] Sandbox escape signature DETECTED in WebKit JIT compiler\\n[MITIGATION] WebContent process TERMINATED ◈ Container memory wiped.\\n[STATUS] IPADOS APFS SECURE ◈ Sandbox Intact." },
+      injection: { title: "UJI BLASTDOOR EXPLOIT", log: "[BLASTDOOR_WATCHER] Parsing malformed .webp image chunk in iMessage pipeline\\n[RULE: IOS-02] Buffer overflow attempt intercepted in BlastDoor isolation\\n[MITIGATION] Malicious payload DROPPED ◈ Zero kernel impact.\\n[STATUS] ZERO-CLICK THREAT NEUTRALIZED." },
+      keylogger: { title: "UJI KEYCHAIN EXTRACTION", log: "[KEYCHAIN_DEFENSE] Untrusted process requesting kSecAccessControlBiometryAny\\n[RULE: IOS-05] Missing Secure Enclave Entitlement signature\\n[MITIGATION] Access DENIED by Secure Enclave Processor (SEP).\\n[STATUS] CREDENTIALS SAFE IN SECURE ENCLAVE." },
+      revshell: { title: "UJI MDM PROFILE INJECTION", log: "[PROFILE_WATCHER] Attempting silent install of Root CA Certificate Profile\\n[RULE: IOS-03] Untrusted enterprise provisioning profile flagged\\n[MITIGATION] Profile rejected ◈ User biometric authentication demanded.\\n[STATUS] SSL CERTIFICATE HIJACK BLOCKED." }
+    }
+  },
+
+  ios: {
+    key: 'ios',
+    displayName: 'Apple iOS (iPhone Smartphone)',
+    icon: 'fa-brands fa-apple',
+    color: '#38bdf8',
+    badgeText: 'iOS 18.2 (Apple A18 Pro ARM64)',
+    storageTarget: 'APFS Secure Container (/var/mobile & /System/Library)',
+    quickScanTitle: 'QUICK SCAN (iOS APFS CONTAINERS)',
+    fullScanTitle: 'FULL APFS STORAGE SCAN (/var/mobile & Sandboxes)',
+    customFolderTitle: 'SCAN CONTAINER / SANDBOX...',
+    customFileTitle: 'SCAN FILE / PROFILE...',
+    dropzoneHint: 'Mendukung pemindaian configuration profiles (.mobileconfig), web cache, IPA container, dan media sandbox iOS.',
+    shieldDesc: 'APFS Secure Container /var/mobile & Keychain Terlindungi dari Exploit & Zero-Click Spyware.',
+    quickFiles: [
+      "/System/Library/CoreServices/SpringBoard.app/SpringBoard",
+      "/var/mobile/Containers/Data/Application/MobileSafari/Data/",
+      "/System/Library/Frameworks/WebKit.framework/WebKit",
+      "/private/var/mobile/Library/SMS/sms.db",
+      "/System/Library/PrivateFrameworks/MobileWiFi.framework",
+      "/var/mobile/Media/DCIM/100APPLE/",
+      "/System/Library/Caches/com.apple.dyld/dyld_shared_cache_arm64e",
+      "/var/mobile/Library/Preferences/com.apple.security.plist",
+      "/Applications/MobileSafari.app/MobileSafari",
+      "/usr/lib/libsystem_kernel.dylib"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/var/mobile/Containers/Shared/AppGroup/group.com.apple.mobilephone/",
+        "/var/mobile/Media/PhotoData/Photos.sqlite",
+        "/private/var/mobile/Library/Keychains/keychain-2.db",
+        "/System/Library/PrivateFrameworks/AppleAccount.framework",
+        "/var/mobile/Library/Caches/com.apple.WebKit.WebContent/"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(`${p}stream_${i}.apfs`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "IOS-01", name: "Sandbox Escape & WebKit JIT Exploit Guard", trigger: "Thread WebContent mencoba melompat ke luar App Sandbox", action: "FREEZE_CONTAINER", status: "ACTIVE" },
+      { id: "IOS-02", name: "Zero-Click BlastDoor iMessage Guard", trigger: "Malformed attachment payload terdeteksi di BlastDoor parser", action: "DROP_MALFORMED_PACKET", status: "PROTECTED" },
+      { id: "IOS-03", name: "Malicious MDM & Provisioning Profile Guard", trigger: "Pemasangan profil sertifikat root SSL tidak terpercaya", action: "PROHIBIT_PROFILE_INSTALL", status: "ACTIVE" },
+      { id: "IOS-04", name: "Pegasus / Predator Spyware Watcher", trigger: "Proses latar belakang mencoba mengakses CoreTelephony & Audio", action: "REVOKE_MICROPHONE_STREAM", status: "ACTIVE" },
+      { id: "IOS-05", name: "Unauthorized Keychain Extraction Interceptor", trigger: "Aplikasi membaca Keychain tanpa entitlement resmi", action: "LOCK_SECURE_ENCLAVE", status: "PROTECTED" },
+      { id: "IOS-06", name: "Kernel Memory Patch & PPL Bypass Guard", trigger: "Upaya memodifikasi Page Protection Layer (PPL)", action: "RESTORE_PPL_PROTECTION", status: "PROTECTED" }
+    ],
+    threatSignatures: [
+      { name: "Pegasus Zero-Click", family: "Spyware.iOS.Pegasus", cve: "CVE-2023-41064", sev: "Critical", desc: "Spyware militer zero-click tanpa interaksi pengguna via iMessage.", hash: "3e98ac12049bf9283c74901c8273bd91" },
+      { name: "GoldPickaxe iOS", family: "Trojan.iOS.GoldPickaxe", cve: "MDM Profile Abuse", sev: "Critical", desc: "Mencuri data biometrik FaceID dan dokumen identitas korban.", hash: "7c19283bc9281749283bc92817492838" }
+    ],
+    quarantineVault: [
+      { id: "Q-IOS-702", file: "/var/mobile/Library/ConfigurationProfiles/ad_tracker.mobileconfig", threat: "Profile.Adware.iOS.Tracker", date: "2026-08-24 06:15", sev: "Medium", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI SANDBOX ESCAPE WEBKIT", log: "[SANDBOX_ATTACK] WebContent process attempting Mach port traversal\\n[RULE: IOS-01] Sandbox escape pattern DETECTED\\n[MITIGATION] WebContent process TERMINATED.\\n[STATUS] IPHONE APFS SECURE." },
+      injection: { title: "UJI BLASTDOOR EXPLOIT", log: "[BLASTDOOR_WATCHER] Malformed image chunk in BlastDoor pipeline\\n[RULE: IOS-02] Buffer overflow intercepted\\n[MITIGATION] Payload DROPPED ◈ Zero kernel impact.\\n[STATUS] ZERO-CLICK NEUTRALIZED." },
+      keylogger: { title: "UJI KEYCHAIN EXTRACTION", log: "[KEYCHAIN_DEFENSE] Untrusted process requesting Keychain access\\n[RULE: IOS-05] Missing Entitlement signature\\n[MITIGATION] Access DENIED by Secure Enclave.\\n[STATUS] KEYCHAIN PROTECTED." },
+      revshell: { title: "UJI MDM PROFILE INJECTION", log: "[PROFILE_WATCHER] Attempting silent install of Root CA Profile\\n[RULE: IOS-03] Untrusted profile flagged\\n[MITIGATION] Profile rejected.\\n[STATUS] PROFILE INJECTION BLOCKED." }
+    }
+  },
+
+  macos: {
+    key: 'macos',
+    displayName: 'macOS (Macintosh HD)',
+    icon: 'fa-brands fa-apple',
+    color: 'var(--cyan)',
+    badgeText: 'macOS 15 Sequoia (Apple M3 Max)',
+    storageTarget: 'Macintosh HD (APFS Volumes: System, Data & Containers)',
+    quickScanTitle: 'QUICK SCAN (macOS SYSTEM & APPS)',
+    fullScanTitle: 'FULL MACINTOSH HD SCAN (APFS Volumes)',
+    customFolderTitle: 'SCAN FOLDER / VOLUME...',
+    customFileTitle: 'SCAN FILE / DMG...',
+    dropzoneHint: 'Mendukung pemindaian file installer (.dmg, .pkg, .app), dylib, plist, dan direktori pengguna.',
+    shieldDesc: 'Volume Macintosh HD & Gatekeeper Terlindungi dari Ransomware & Dylib Injection.',
+    quickFiles: [
+      "/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder",
+      "/Applications/Safari.app/Contents/MacOS/Safari",
+      "/Library/LaunchDaemons/com.apple.system.security.plist",
+      "/System/Volumes/Data/Users/Shared/helper.dylib",
+      "/usr/bin/sudo",
+      "/Library/Extensions/SecurityKext.kext",
+      "/System/Library/Frameworks/Security.framework/Security",
+      "/Users/hartadi/Downloads/update_installer.dmg",
+      "/System/Library/LaunchAgents/com.apple.tccd.plist",
+      "/usr/sbin/systemkeychain"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/System/Volumes/Data/Applications/AutoCAD.app/Contents/MacOS/",
+        "/Library/Application Support/Adobe/Common/Plugin_",
+        "/Users/hartadi/Library/Application Support/Google/Chrome/Default/",
+        "/System/Library/PrivateFrameworks/AppleFSCompression.framework/",
+        "/usr/local/bin/python3_engine_",
+        "/System/Volumes/Data/Users/hartadi/Documents/CivilProjects/"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(`${p}module_${i}.dylib`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "MAC-01", name: "Gatekeeper & XProtect Bypass Detector", trigger: "Eksekusi binary tanpa sertifikat Apple Notarization resmi", action: "BLOCK_EXECUTION & QUARANTINE", status: "ACTIVE" },
+      { id: "MAC-02", name: "Dylib Hijacking & Mach-O Injection Guard", trigger: "Pustaka dylib tak dikenal dimuat ke ruang memori aplikasi bersertifikat", action: "KILL_PROCESS & LOG_EVENT", status: "PROTECTED" },
+      { id: "MAC-03", name: "TCC (Privacy & Consent) Database Guard", trigger: "Aplikasi mencoba memodifikasi database TCC.db (akses Kamera/Mic/Disk)", action: "RESTORE_TCC_PERMISSIONS", status: "ACTIVE" },
+      { id: "MAC-04", name: "LaunchDaemon / LaunchAgent Persistence Watcher", trigger: "Script menambahkan entri autostart di /Library/LaunchDaemons tanpa izin root", action: "DELETE_UNAUTHORIZED_PLIST", status: "ACTIVE" },
+      { id: "MAC-05", name: "Keychain & Safari Password Snooper Guard", trigger: "Aplikasi mencoba membaca dump memori securityd untuk mengekstrak password", action: "LOCK_KEYCHAIN_STORE", status: "PROTECTED" },
+      { id: "MAC-06", name: "Ransomware Mass-Encryption Watcher", trigger: "Proses memodifikasi > 25 file di direktori /Users dalam 2 detik", action: "TERMINATE_PID & REVERT_APFS", status: "ACTIVE" }
+    ],
+    threatSignatures: [
+      { name: "Shlayer Trojan", family: "Trojan.OSX.Shlayer", cve: "Gatekeeper Bypass", sev: "Critical", desc: "DMG dropper bertanda tangan yang menginstal adware dan backdoor tersembunyi.", hash: "ac19283bc9281749283bc92817492839" },
+      { name: "Atomic Stealer (AMOS)", family: "Stealer.OSX.Atomic", cve: "ATT&CK T1555", sev: "Critical", desc: "Pencuri kata sandi Keychain, cookies browser, dan dompet crypto.", hash: "5d9283bc9281749283bc9281749283ba" },
+      { name: "Pirrit Mac Adware", family: "Adware.OSX.Pirrit", cve: "Browser Injection", sev: "High", desc: "Menginjeksi iklan pop-up dan membajak mesin pencari default Safari/Chrome.", hash: "d6f49a37e408848d5d4d3a82928c03e1" },
+      { name: "ShadowPad macOS", family: "Backdoor.OSX.ShadowPad", cve: "Supply Chain Injection", sev: "Critical", desc: "Backdoor modular yang disisipkan ke dalam build tool pengembang.", hash: "4d023b1239c0fef93bc2a912837bcde2" }
+    ],
+    quarantineVault: [
+      { id: "Q-MAC-601", file: "/Users/hartadi/Downloads/Adobe_Zii_Patcher.dmg", threat: "Trojan.OSX.Shlayer.Dropper", date: "2026-08-23 19:10", sev: "Critical", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI RANSOMWARE APFS MASS-ENCRYPT", log: "[RANSOMWARE_WATCHER] Process PID #3891 attempting bulk .lock file write in /Users/Shared\\n[RULE: MAC-06] Mass-encryption heuristic MATCHED (45 files/sec)\\n[MITIGATION] Process TERMINATED ◈ APFS snapshot restore initiated.\\n[STATUS] MACINTOSH HD SECURE ◈ Zero Data Lost." },
+      injection: { title: "UJI DYLIB HIJACKING", log: "[DYLIB_GUARD] Safari.app attempting load of unsigned /tmp/libinject.dylib\\n[RULE: MAC-02] Dylib injection attempt DETECTED\\n[MITIGATION] Dylib load BLOCKED ◈ Mach-O signature validated.\\n[STATUS] MEMORY INTEGRITY PROTECTED." },
+      keylogger: { title: "UJI TCC DATABASE TAMPERING", log: "[TCC_GUARD] Process attempting direct SQL write to ~/Library/Application Support/com.apple.TCC/TCC.db\\n[RULE: MAC-03] Unauthorized camera/mic permission grant attempt\\n[MITIGATION] Database lock enforced ◈ TCC permissions restored.\\n[STATUS] PRIVACY SETTINGS SAFE." },
+      revshell: { title: "UJI LAUNCHDAEMON PERSISTENCE", log: "[PERSISTENCE_WATCHER] Script creating /Library/LaunchDaemons/com.evil.payload.plist\\n[RULE: MAC-04] Unauthorized root persistence attempt\\n[MITIGATION] Plist file DELETED ◈ Daemon unlinked.\\n[STATUS] PERSISTENCE NEUTRALIZED." }
+    }
+  },
+
+  linux: {
+    key: 'linux',
+    displayName: 'Linux OS (POSIX Filesystem)',
+    icon: 'fa-brands fa-linux',
+    color: 'var(--neon-green)',
+    badgeText: 'Linux Ubuntu 24.04 LTS (Kernel 6.8.0)',
+    storageTarget: 'Root Partition (/) & Home (/home/hartadi)',
+    quickScanTitle: 'QUICK SYSTEM SCAN (POSIX /usr/bin & /etc)',
+    fullScanTitle: 'FULL FILESYSTEM SCAN (/ & /home)',
+    customFolderTitle: 'SCAN DIREKTORI /home...',
+    customFileTitle: 'SCAN FILE / BINARY...',
+    dropzoneHint: 'Mendukung pemindaian executable binary (ELF), bash script (.sh), deb/rpm package, dan konfigurasi /etc.',
+    shieldDesc: 'Root partition / & /home Terlindungi dari eBPF Rootkit & Cryptominer Daemons.',
+    quickFiles: [
+      "/usr/bin/systemd",
+      "/etc/passwd",
+      "/etc/shadow",
+      "/var/log/syslog",
+      "/lib/x86_64-linux-gnu/libc.so.6",
+      "/home/hartadi/.config/autostart/",
+      "/usr/lib/systemd/system/sshd.service",
+      "/boot/vmlinuz-6.8.0-generic",
+      "/etc/apt/sources.list",
+      "/tmp/.X11-unix/X0",
+      "/etc/sudoers"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/usr/local/bin/engineering_solver_",
+        "/var/lib/docker/overlay2/layer_",
+        "/home/hartadi/Projects/DamAnalytics/data_",
+        "/usr/share/nginx/html/assets/core_",
+        "/opt/geotech_studio/bin/engine_",
+        "/etc/cron.daily/backup_"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(`${p}${i}.so`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "LNX-01", name: "eBPF & LKM Kernel Rootkit Detector", trigger: "Insersi modul kernel mencurigakan (insmod) yang memanipulasi syscall table", action: "BLOCK_LKM_INSERTION", status: "ACTIVE" },
+      { id: "LNX-02", name: "SSH Brute-Force & Reverse Shell Guard", trigger: "Proses bash/sh membuka socket TCP keluar ke port asing (4444, 1337)", action: "KILL_SOCKET & BAN_IP", status: "ACTIVE" },
+      { id: "LNX-03", name: "Sudo / SUID Privilege Escalation Guard", trigger: "Eksploitasi Baron Samedit / Dirty Pipe pada file berhak akses root", action: "DROP_ELEVATED_PRIVILEGES", status: "PROTECTED" },
+      { id: "LNX-04", name: "XMRig & Cryptominer Daemon Watcher", trigger: "Proses tak dikenal memonopoli CPU > 90% dan terhubung ke pool Stratum", action: "TERMINATE_MINER_PID", status: "ACTIVE" },
+      { id: "LNX-05", name: "Cron.d & Systemd Timer Persistence Guard", trigger: "Modifikasi file di /etc/cron.d atau /etc/systemd/system tanpa izin admin", action: "RESTORE_CONFIG_BACKUP", status: "ACTIVE" },
+      { id: "LNX-06", name: "Mirai & Mozi Botnet C2 Socket Interceptor", trigger: "Proses melakukan scan SYN massal ke port Telnet/SSH pada subnet lokal", action: "SEVER_NETWORK_INTERFACE", status: "PROTECTED" }
+    ],
+    threatSignatures: [
+      { name: "Mirai Botnet", family: "Botnet.Linux.Mirai", cve: "CVE-2016-10372", sev: "High", desc: "Penyusup IoT dan router untuk serangan DDoS terdistribusi skala Terabit.", hash: "9c829374bc9281749283bc9281749283" },
+      { name: "XorDDOS", family: "Trojan.Linux.XorDDOS", cve: "ATT&CK T1059.004", sev: "Critical", desc: "Trojan DDoS yang mengenkripsi payload komunikasinya dengan kunci XOR.", hash: "5c842b1029c490aef92bc10293cba41e" },
+      { name: "RansomExx Linux", family: "Ransomware.Linux.RansomExx", cve: "ATT&CK T1486", sev: "Critical", desc: "Ransomware terarah yang menargetkan server virtualisasi VMware ESXi.", hash: "7b4892c019283e74892bc012984ef928" },
+      { name: "Diamorphine Rootkit", family: "Rootkit.Linux.Diamorphine", cve: "LKM Syscall Hook", sev: "Critical", desc: "Kernel module rootkit yang menyembunyikan proses, file, dan soket jaringan.", hash: "ac19283bc9281749283bc92817492839" }
+    ],
+    quarantineVault: [
+      { id: "Q-LNX-501", file: "/tmp/.xmrig_miner.elf", threat: "Miner.Linux.XMRig.CoinMiner", date: "2026-08-23 23:15", sev: "High", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI RANSOMEXX LINUX ENCRYPT", log: "[RANSOMWARE_WATCHER] Process /tmp/encryptor attempting bulk write to /home/hartadi/\\n[RULE: LNX-05] Mass-encryption pattern DETECTED\\n[MITIGATION] Process PID #5102 TERMINATED ◈ Filesystem read-only lock.\\n[STATUS] LINUX POSIX ROOT SECURE." },
+      injection: { title: "UJI LKM ROOTKIT INSERTION", log: "[KERNEL_GUARD] Module /tmp/hook.ko attempting init_module() syscall hook\\n[RULE: LNX-01] Unauthorized kernel module insertion DETECTED\\n[MITIGATION] Module signature verification FAILED ◈ insmod BLOCKED.\\n[STATUS] KERNEL INTEGRITY MAINTAINED." },
+      keylogger: { title: "UJI PRIVILEGE ESCALATION", log: "[PRIVILEGE_GUARD] Non-root process attempting SUID exploit on /usr/bin/pkexec\\n[RULE: LNX-03] Privilege escalation attempt (CVE-2021-4034)\\n[MITIGATION] Process dropped to nobody ◈ Alert dispatched.\\n[STATUS] ROOT ACCESS PROTECTED." },
+      revshell: { title: "UJI REVERSE SHELL SOCKET", log: "[SOCKET_WATCHER] Process /bin/sh opening TCP socket to 185.220.101.4:4444\\n[RULE: LNX-02] Outbound reverse shell signature MATCHED\\n[MITIGATION] Socket connection SEVERED ◈ Remote IP blacklisted in iptables.\\n[STATUS] REVERSE SHELL TERMINATED." }
+    }
+  },
+
+
+  harmonyos: {
+    key: 'harmonyos',
+    displayName: 'Huawei HarmonyOS (Mobile / MatePad)',
+    icon: 'fa-solid fa-microchip',
+    color: '#f472b6',
+    badgeText: 'HarmonyOS 4.2 (ArkTS ARM64)',
+    storageTarget: 'Harmony Ability Sandbox (/data/hap & /storage/emulated/0)',
+    quickScanTitle: 'QUICK SCAN (HARMONYOS ABILITIES & HAPs)',
+    fullScanTitle: 'FULL STORAGE SCAN (/data/hap & Internal)',
+    customFolderTitle: 'SCAN FOLDER SANDBOX...',
+    customFileTitle: 'SCAN HAP / FILE...',
+    dropzoneHint: 'Mendukung pemindaian package Harmony (.hap, .app), bytecode ArkTS (.abc), dan file internal.',
+    shieldDesc: 'Harmony Ability Sandbox /data/hap Terlindungi dari Sideload Abuse & Bytecode Tampering.',
+    quickFiles: [
+      "/system/bin/appspawn",
+      "/data/hap/com.huawei.security/base.hap",
+      "/system/framework/ark_runtime.abc",
+      "/storage/emulated/0/Download/update_package.hap",
+      "/system/etc/security/trusted_certs.pem",
+      "/data/storage/el1/bundle/base.hap",
+      "/system/lib64/libark_jsruntime.so",
+      "/data/app/com.huawei.systemmanager/base.hap"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      const prefixes = [
+        "/data/hap/com.huawei.health/base.hap",
+        "/storage/emulated/0/Documents/Civil_Report_",
+        "/system/framework/arkui_engine.abc",
+        "/data/storage/el2/base/files/data_",
+        "/vendor/lib64/hw/camera.harmonyos.so"
+      ];
+      for (let i = 1; i <= 60; i++) {
+        const p = prefixes[i % prefixes.length];
+        list.push(`${p}module_${i}.hap`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "HMY-01", name: "ArkTS Bytecode Tampering Guard", trigger: "Modifikasi file .abc tanpa verifikasi signature Huawei DevEco", action: "BLOCK_BYTECODE_EXECUTION", status: "ACTIVE" },
+      { id: "HMY-02", name: "Ability Sideloading & Background Dropper Watcher", trigger: "Aplikasi mencoba menginstal HAP tersembunyi tanpa izin pengguna", action: "KILL_ABILITY_SPAWN", status: "PROTECTED" },
+      { id: "HMY-03", name: "Distributed Virtual Bus Interceptor", trigger: "Koneksi tak dikenal ke Distributed Soft Bus untuk transfer data rahasia", action: "SEVER_SOFTBUS_CHANNEL", status: "ACTIVE" },
+      { id: "HMY-04", name: "IME & Clipboard Snooper Guard", trigger: "Keyboard pihak ketiga membaca clipboard tanpa fokus window aktif", action: "ISOLATE_IME_CONTAINER", status: "PROTECTED" }
+    ],
+    threatSignatures: [
+      { name: "FakeBank HAP", family: "Trojan-Banker.HarmonyOS.FakeBank", cve: "ArkTS Injection", sev: "Critical", desc: "Overlay antarmuka palsu yang menargetkan perbankan pada HarmonyOS.", hash: "4d023b1239c0fef93bc2a912837bcde2" },
+      { name: "AirDrop Spyware HAP", family: "Spyware.HarmonyOS.Snooper", cve: "Distributed Bus Exploit", sev: "High", desc: "Mencuri file yang dibagikan melalui koneksi softbus nirkabel.", hash: "991e2b8374a01c89de273b7492c1094f" }
+    ],
+    quarantineVault: [
+      { id: "Q-HMY-401", file: "/storage/emulated/0/Download/unverified_patch.hap", threat: "Trojan-Dropper.HarmonyOS.Agent", date: "2026-08-24 05:40", sev: "Critical", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI ARKTS BYTECODE INJECTION", log: "[BYTECODE_WATCHER] Process PID #7102 attempting unverified .abc bytecode patch\n[RULE: HMY-01] ArkTS signature verification FAILED\n[MITIGATION] Bytecode execution BLOCKED ◈ Ability sandbox isolated.\n[STATUS] HARMONYOS ABILITY SECURE." },
+      injection: { title: "UJI ABILITY SPAWN HIJACK", log: "[ABILITY_GUARD] Untrusted package attempting silent AppSpawn trigger\n[RULE: HMY-02] Background HAP install attempt DETECTED\n[MITIGATION] AppSpawn request REJECTED ◈ Malicious HAP quarantined.\n[STATUS] ABILITY SPAWN PROTECTED." },
+      keylogger: { title: "UJI SOFTBUS SNOOPER", log: "[SOFTBUS_GUARD] Anomaly on Distributed Virtual Bus socket 192.168.1.55:8888\n[RULE: HMY-03] Unauthorized device pairing attempt intercepted\n[MITIGATION] Bus channel SEVERED ◈ Encryption key refreshed.\n[STATUS] DISTRIBUTED DATA SAFE." },
+      revshell: { title: "UJI OUTBOUND HAP C2 SOCKET", log: "[SOCKET_WATCHER] HAP process attempting TCP connect to 185.220.101.4:4444\n[RULE: HMY-04] C2 outbound communication signature MATCHED\n[MITIGATION] Packet DROPPED ◈ Remote host blacklisted.\n[STATUS] C2 BEACONING TERMINATED." }
+    }
+  },
+  windows: {
+    key: 'windows',
+    displayName: 'Windows 11 / 10 OS',
+    icon: 'fa-brands fa-windows',
+    color: 'var(--neon-blue)',
+    badgeText: 'Windows 11 Pro 24H2 (x86_64)',
+    storageTarget: 'NTFS Drive Volumes (C: & D:)',
+    quickScanTitle: 'QUICK SYSTEM SCAN (System32 & Startup)',
+    fullScanTitle: 'FULL DRIVE SCAN (C: & D:)',
+    customFolderTitle: 'SCAN FOLDER LOKAL...',
+    customFileTitle: 'SCAN FILE TERTENTU...',
+    dropzoneHint: 'Mendukung pemindaian file aplikasi (.exe, .dll, .bat, .ps1), dokumen (.pdf, .docx, .zip), dan folder sistem Windows.',
+    shieldDesc: 'Drive C: & D: Terlindungi dari Ransomware, Trojan Dropper & Process Injection.',
+    quickFiles: [
+      "C:\\\\Windows\\\\System32\\\\ntoskrnl.exe",
+      "C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts",
+      "C:\\\\Windows\\\\System32\\\\svchost.exe",
+      "C:\\\\Windows\\\\explorer.exe",
+      "C:\\\\Program Files\\\\Common Files\\\\system.dll",
+      "C:\\\\Users\\\\AppData\\\\Roaming\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\helper.vbs",
+      "C:\\\\Windows\\\\System32\\\\cmd.exe",
+      "C:\\\\Windows\\\\System32\\\\powershell.exe",
+      "C:\\\\Windows\\\\System32\\\\lsass.exe",
+      "C:\\\\Windows\\\\System32\\\\winlogon.exe"
+    ],
+    fullFilesGenerator: function() {
+      let list = [];
+      for (let i = 1; i <= 60; i++) {
+        list.push(`C:\\\\Windows\\\\System32\\\\lib_core_${i}.dll`);
+        list.push(`D:\\\\Engineering_Projects_2026\\\\WayApuDam\\\\seepage_data_${i}.csv`);
+        list.push(`D:\\\\Software\\\\Civil3D\\\\bin\\\\solver_fem_${i}.exe`);
+      }
+      return list;
+    },
+    behavioralRules: [
+      { id: "WIN-01", name: "Ransomware Mass-Encryption Watcher", trigger: "Proses memodifikasi > 30 file dalam waktu < 3 detik", action: "KILL_PROCESS & FREEZE_DRIVE", status: "PROTECTED" },
+      { id: "WIN-02", name: "Process Injection & DLL Hollow Detector", trigger: "Thread asing mencoba menulis ke ruang memori svchost / explorer.exe", action: "BLOCK_INJECTION & ISOLATE", status: "ACTIVE" },
+      { id: "WIN-03", name: "Privilege Escalation & Kernel Hook Guard", trigger: "Upaya bypass token SeDebugPrivilege tanpa otorisasi admin", action: "REVOKE_TOKEN & LOG_ALERT", status: "ACTIVE" },
+      { id: "WIN-04", name: "Keylogger & Clipboard Polling Interceptor", trigger: "Aplikasi latar belakang memanggil GetAsyncKeyState / SetWindowsHookEx", action: "QUARANTINE_APP", status: "MONITORED" },
+      { id: "WIN-05", name: "Reverse Shell & C2 Outbound Beaconing", trigger: "Proses tak dikenal membuka socket TCP/UDP ke port mencurigakan (4444, 1337)", action: "SEVER_CONNECTION", status: "INTERCEPTED" },
+      { id: "WIN-06", name: "Obfuscated / Encoded Script Execution", trigger: "PowerShell mengeksekusi parameter -EncodedCommand / IEX (Base64 XOR)", action: "BLOCK_EXECUTION", status: "ACTIVE" }
+    ],
+    threatSignatures: [
+      { name: "WannaCry", family: "Ransomware.Win32.WannaCrypt", cve: "CVE-2017-0144 (EternalBlue)", sev: "Critical", desc: "Enkripsi massal ekstensi .WNCRY dengan eksploit SMBv1 port 445.", hash: "84c82835a5d21bbcf75a61706d8ab549" },
+      { name: "LockBit 3.0", family: "Ransomware.LockBit.V3", cve: "CVE-2023-38831", sev: "Critical", desc: "Ransomware kecepatan tinggi dengan bypass UAC dan penghapusan VSS shadow copy.", hash: "d6f49a37e408848d5d4d3a82928c03e1" },
+      { name: "Emotet", family: "Trojan.Banker.Emotet", cve: "CVE-2020-0688", sev: "Critical", desc: "Modular polymorphic banking trojan yang menyebar via email phishing.", hash: "4d023b1239c0fef93bc2a912837bcde2" },
+      { name: "AgentTesla", family: "Spyware.Keylogger.AgentTesla", cve: "CVE-2017-11882", sev: "High", desc: "Pencuri kredensial browser, email klien, dan penangkap ketukan keyboard.", hash: "991e2b8374a01c89de273b7492c1094f" }
+    ],
+    quarantineVault: [
+      { id: "Q-WIN-901", file: "C:\\\\Users\\\\Downloads\\\\invoice_document.pdf.exe", threat: "Trojan.Win32.Dropper (Double Extension)", date: "2026-08-23 18:20", sev: "Critical", status: "QUARANTINED" },
+      { id: "Q-WIN-902", file: "D:\\\\Temp\\\\setup_patch_keygen.bat", threat: "Script.Malicious.PowerShell.Obfuscated", date: "2026-08-23 14:05", sev: "High", status: "QUARANTINED" }
+    ],
+    simAttacks: {
+      ransomware: { title: "UJI RANSOMWARE ENCRYPTION", log: "[HEURISTIC_TRIGGER] Process PID #4921 (crypt_worker.exe) attempting bulk file rename (*.wncry)\\n[RULE: WIN-01] Mass-encryption pattern DETECTED (52 files/sec)\\n[MITIGATION] PID #4921 TERMINATED IMMEDIATELY ◈ Target folder locked in safe mode.\\n[STATUS] RANSOMWARE NEUTRALIZED ◈ Zero Files Encrypted." },
+      injection: { title: "UJI PROCESS INJECTION DLL HOLLOW", log: "[HEURISTIC_TRIGGER] Process PID #2104 attempting VirtualAllocEx on svchost.exe (DLL Hollow)\\n[RULE: WIN-02] Process Injection Signature MATCHED\\n[MITIGATION] Memory write BLOCKED ◈ Process PID #2104 ISOLATED in Sandbox.\\n[STATUS] INJECTION BLOCKED ◈ System Integrity Maintained." },
+      keylogger: { title: "UJI KEYLOGGER POLLING HOOK", log: "[HEURISTIC_TRIGGER] Background service hook calling SetWindowsHookEx (WH_KEYBOARD_LL)\\n[RULE: WIN-04] Unauthorized Keystroke Intercept DETECTED\\n[MITIGATION] Hook DETACHED ◈ Keylogger payload quarantined.\\n[STATUS] KEYLOGGER INTERCEPTED." },
+      revshell: { title: "UJI REVERSE SHELL C2 OUTBOUND", log: "[HEURISTIC_TRIGGER] Outbound TCP handshake to 185.220.101.4:4444 (Known C2 Subnet)\\n[RULE: WIN-05] Reverse Shell Payload MATCHED\\n[MITIGATION] Firewall Packet DROPPED ◈ Remote C2 IP Blacklisted.\\n[STATUS] C2 BEACONING TERMINATED." }
+    }
+  }
+};
+
+// Unified Global Database of All Threats across platforms
 const globalVirusDatabase = [
-  { name: "WannaCry", family: "Ransomware.Win32.WannaCrypt", cve: "CVE-2017-0144 (EternalBlue)", sev: "Critical", desc: "Enkripsi massal ekstensi .WNCRY dengan eksploit SMBv1 port 445.", hash: "84c82835a5d21bbcf75a61706d8ab549" },
-  { name: "LockBit 3.0 (Black)", family: "Ransomware.LockBit.V3", cve: "CVE-2023-38831", sev: "Critical", desc: "Ransomware kecepatan tinggi dengan bypass UAC, penghapusan shadow copy (VSS), dan anti-analisis.", hash: "d6f49a37e408848d5d4d3a82928c03e1" },
-  { name: "Emotet", family: "Trojan.Banker.Emotet", cve: "CVE-2020-0688", sev: "Critical", desc: "Modular polymorphic banking trojan yang menyebar via email phishing dan macro dokumen.", hash: "4d023b1239c0fef93bc2a912837bcde2" },
-  { name: "AgentTesla", family: "Spyware.Keylogger.AgentTesla", cve: "CVE-2017-11882", sev: "High", desc: "Pencuri kredensial browser, email klien, VPN, dan penangkap ketukan keyboard (keylogger).", hash: "991e2b8374a01c89de273b7492c1094f" },
-  { name: "Stuxnet", family: "Worm.Industrial.Stuxnet", cve: "CVE-2010-2568 (LNK)", sev: "Critical", desc: "Cyber-weapon militer canggih yang menargetkan sistem SCADA / PLC Siemens industri.", hash: "5c842b1029c490aef92bc10293cba41e" },
-  { name: "Pegasus Spyware", family: "Spyware.Advanced.Pegasus", cve: "CVE-2021-30860 (Zero-Click)", sev: "Critical", desc: "Spyware zero-click canggih yang menyusup ke mikrofon, kamera, pesan terenkripsi, dan lokasi GPS.", hash: "3e98ac12049bf9283c74901c8273bd91" },
-  { name: "DarkSide", family: "Ransomware.DarkSide.Pipeline", cve: "CVE-2021-20016", sev: "Critical", desc: "Ransomware ganda (Double-extortion) yang mencuri data sensitif sebelum mengenkripsi sistem.", hash: "7b4892c019283e74892bc012984ef928" },
-  { name: "Cobalt Strike Beacon", family: "Adversary.Tool.CobaltStrike", cve: "ATT&CK T1059", sev: "High", desc: "Injeksi proses memori tidak sah untuk lateral movement dan komunikasi C2 terenkripsi.", hash: "1a8293bc9281748293bc9281749283bc" },
-  { name: "Mirai Botnet", family: "Botnet.Linux.Mirai", cve: "CVE-2016-10372", sev: "High", desc: "Penyusup perangkat IoT dan router untuk serangan DDoS terdistribusi kapasitas Terabit.", hash: "9c829374bc9281749283bc9281749283" },
-  { name: "RedLine Stealer", family: "Infostealer.RedLine.Payload", cve: "ATT&CK T1555", sev: "High", desc: "Mengekstrak password tersimpan, token Discord, dompet cryptocurrency, dan session cookies.", hash: "2e81938bc9281749283bc9281749283b" },
-  { name: "BlackCat (ALPHV)", family: "Ransomware.Rust.ALPHV", cve: "CVE-2022-26923", sev: "Critical", desc: "Ransomware modern berbasis bahasa pemrograman Rust dengan enkripsi multithreaded kilat.", hash: "5d9283bc9281749283bc9281749283ba" },
-  { name: "SolarWinds Sunburst", family: "Backdoor.Sunburst.SupplyChain", cve: "CVE-2020-10148", sev: "Critical", desc: "Backdoor rantai pasok perangkat lunak yang bersembunyi dalam file DLL Orion resmi.", hash: "ac19283bc9281749283bc92817492839" },
-  { name: "HermeticWiper", family: "Wiper.Win32.HermeticWiper", cve: "ATT&CK T1561", sev: "Critical", desc: "Merusak Master Boot Record (MBR) dan menghancurkan partisi drive penyimpanan secara permanen.", hash: "7c19283bc9281749283bc92817492838" },
-  { name: "Snake Keylogger", family: "Spyware.Keylogger.Snake", cve: "CVE-2017-0199", sev: "High", desc: "Perekam ketukan keyboard dan clipboard yang mengirim log via Telegram Bot & SMTP terenkripsi.", hash: "3b19283bc9281749283bc92817492837" }
+  ...osProfiles.android.threatSignatures,
+  ...osProfiles.ipados.threatSignatures,
+  ...osProfiles.macos.threatSignatures,
+  ...osProfiles.linux.threatSignatures,
+  ...osProfiles.windows.threatSignatures,
+  ...(osProfiles.harmonyos ? osProfiles.harmonyos.threatSignatures : [])
 ];
 
-// Algoritma Heuristik & Behavioral Analysis Rules
-const behavioralRules = [
-  { id: "BEH-01", name: "Ransomware Mass-Encryption Watcher", trigger: "Proses memodifikasi > 30 file dalam waktu < 3 detik", action: "KILL_PROCESS & FREEZE_DRIVE", status: "PROTECTED" },
-  { id: "BEH-02", name: "Process Injection & DLL Hollow Detector", trigger: "Thread asing mencoba menulis ke ruang memori svchost / explorer.exe", action: "BLOCK_INJECTION & ISOLATE", status: "ACTIVE" },
-  { id: "BEH-03", name: "Privilege Escalation & Kernel Hook Guard", trigger: "Upaya bypass token SeDebugPrivilege tanpa otorisasi admin", action: "REVOKE_TOKEN & LOG_ALERT", status: "ACTIVE" },
-  { id: "BEH-04", name: "Keylogger & Clipboard Polling Interceptor", trigger: "Aplikasi latar belakang memanggil GetAsyncKeyState / SetWindowsHookEx", action: "QUARANTINE_APP", status: "MONITORED" },
-  { id: "BEH-05", name: "Reverse Shell & C2 Outbound Beaconing", trigger: "Proses tak dikenal membuka socket TCP/UDP ke port mencurigakan (4444, 1337, TOR)", action: "SEVER_CONNECTION", status: "INTERCEPTED" },
-  { id: "BEH-06", name: "Obfuscated / Encoded Script Execution", trigger: "PowerShell mengeksekusi parameter -EncodedCommand / IEX (Base64 XOR)", action: "BLOCK_EXECUTION", status: "ACTIVE" }
-];
-
-// Quarantine Vault Data
+// Initial Unified Quarantine Vault
 let quarantineVault = [
-  { id: "Q-901", file: "C:\\Users\\Downloads\\invoice_document.pdf.exe", threat: "Trojan.Win32.Dropper (Double Extension)", date: "2026-08-23 18:20", sev: "Critical", status: "QUARANTINED" },
-  { id: "Q-902", file: "D:\\Temp\\setup_patch_keygen.bat", threat: "Script.Malicious.PowerShell.Obfuscated", date: "2026-08-23 14:05", sev: "High", status: "QUARANTINED" }
+  ...osProfiles.android.quarantineVault,
+  ...osProfiles.ipados.quarantineVault,
+  ...osProfiles.macos.quarantineVault,
+  ...osProfiles.linux.quarantineVault,
+  ...osProfiles.windows.quarantineVault,
+  ...(osProfiles.harmonyos ? osProfiles.harmonyos.quarantineVault : [])
 ];
 
 // Scanner State
@@ -5925,18 +6652,46 @@ function renderAvTabContent(tabId) {
   const container = document.getElementById('avTabBody');
   if (!container) return;
 
+  const prof = getActiveOSProfile();
+  const detected = detectCurrentPlatform();
+
   if (tabId === 'scan') {
-    // TAB 1: SCANNER DASHBOARD & DRIVE CHECK
+    // TAB 1: SCANNER DASHBOARD & MULTI-OS STORAGE CHECK
     container.innerHTML = `
       <div class="av-card">
+        
+        <!-- Multi-OS Adaptive Selector Bar -->
+        <div style="background: rgba(0, 24, 48, 0.85); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <div style="font-family: var(--font-hud); font-size: 11.5px; color: rgba(0,242,254,0.8); letter-spacing: 1px;">
+              <i class="fa-solid fa-microchip glow-cyan"></i> TARGET SISTEM PEMINDAIAN:
+            </div>
+            <select class="chat-input-field" id="avTargetOSSelector" onchange="setTargetOS(this.value)" style="padding: 5px 10px; font-size: 13px; font-weight: 700; width: auto; min-width: 230px; border-color: ${prof.color};">
+              <option value="auto" ${currentTargetOS === 'auto' ? 'selected' : ''}>⚙️ AUTO-DETECT (${detected.device})</option>
+              <option value="android" ${currentTargetOS === 'android' ? 'selected' : ''}>🤖 Android (Smartphone / Tablet)</option>
+              <option value="ipados" ${currentTargetOS === 'ipados' ? 'selected' : ''}>🍎 Apple iPadOS (Tablet)</option>
+              <option value="ios" ${currentTargetOS === 'ios' ? 'selected' : ''}>📱 Apple iOS (iPhone)</option>
+              <option value="macos" ${currentTargetOS === 'macos' ? 'selected' : ''}>💻 macOS (Macintosh HD)</option>
+              <option value="linux" ${currentTargetOS === 'linux' ? 'selected' : ''}>🐧 Linux OS (Root Filesystem)</option>
+              <option value="windows" ${currentTargetOS === 'windows' ? 'selected' : ''}>🪟 Windows (Drive C: & D:)</option>
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="threat-pill clean" style="border-color: ${prof.color}; color: ${prof.color}; background: rgba(0,245,212,0.12);">
+              <i class="${prof.icon}"></i> ${prof.badgeText}
+            </span>
+          </div>
+        </div>
+
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
           <div>
             <div style="font-family: var(--font-hud); font-size: 13px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px;">
               <i class="fa-solid fa-shield-virus glow-green" style="color: var(--neon-green);"></i>
-              <span>STATUS ENDPOINT: TERLINDUNGI ◈ REAL-TIME GUARD ACTIVE</span>
+              <span>STATUS ENDPOINT: TERLINDUNGI ◈ ${prof.displayName.toUpperCase()}</span>
             </div>
-            <div style="font-size: 13.5px; color: rgba(0,242,254,0.7); margin-top: 2px;">
-              Mesin Heuristik v8.2 • Database: 4,829,140 Definisi Virus • Engine AI Behavioral: Online
+            <div style="font-size: 13px; color: rgba(0,242,254,0.7); margin-top: 2px;">
+              Target: <b style="color:var(--cyan);">${prof.storageTarget}</b> • Engine: Real-Time Heuristic Zero-Day • 4.8M Signatures
             </div>
           </div>
           <div>
@@ -5944,19 +6699,19 @@ function renderAvTabContent(tabId) {
           </div>
         </div>
 
-        <!-- Scan Action Buttons -->
+        <!-- Scan Action Buttons (Dynamically Adapted to Target OS) -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 14px;">
-          <button class="nav-btn" style="justify-content: center; padding: 10px; font-size: 14px;" onclick="startQuickScan()">
-            <i class="fa-solid fa-bolt glow-amber"></i> QUICK SYSTEM SCAN
+          <button class="nav-btn" style="justify-content: center; padding: 10px; font-size: 13.5px;" onclick="startQuickScan()">
+            <i class="fa-solid fa-bolt glow-amber"></i> ${prof.quickScanTitle}
           </button>
-          <button class="nav-btn" style="justify-content: center; padding: 10px; font-size: 14px;" onclick="startFullDriveScan()">
-            <i class="fa-solid fa-hard-drive glow-cyan"></i> FULL DRIVE SCAN (C: & D:)
+          <button class="nav-btn" style="justify-content: center; padding: 10px; font-size: 13.5px;" onclick="startFullDriveScan()">
+            <i class="fa-solid fa-hard-drive glow-cyan"></i> ${prof.fullScanTitle}
           </button>
-          <button class="nav-btn av-shield" style="justify-content: center; padding: 10px; font-size: 14px;" onclick="triggerFolderPicker()">
-            <i class="fa-solid fa-folder-open"></i> SCAN FOLDER LOKAL...
+          <button class="nav-btn av-shield" style="justify-content: center; padding: 10px; font-size: 13.5px;" onclick="triggerFolderPicker()">
+            <i class="fa-solid fa-folder-open"></i> ${prof.customFolderTitle}
           </button>
-          <button class="nav-btn av-shield" style="justify-content: center; padding: 10px; font-size: 14px;" onclick="triggerFilePicker()">
-            <i class="fa-solid fa-file-shield"></i> SCAN FILE TERTENTU...
+          <button class="nav-btn av-shield" style="justify-content: center; padding: 10px; font-size: 13.5px;" onclick="triggerFilePicker()">
+            <i class="fa-solid fa-file-shield"></i> ${prof.customFileTitle}
           </button>
         </div>
 
@@ -5968,10 +6723,10 @@ function renderAvTabContent(tabId) {
         <div class="av-dropzone" id="avDropZone" ondragover="handleAvDragOver(event)" ondragleave="handleAvDragLeave(event)" ondrop="handleAvDrop(event)" onclick="triggerFilePicker()">
           <i class="fa-solid fa-cloud-arrow-up glow-cyan" style="font-size: 32px; color: var(--cyan); margin-bottom: 8px;"></i>
           <div style="font-family: var(--font-hud); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px;">
-            TARIK & LEPAS FILE ATAU FOLDER LOKAL KE SINI UNTUK SCANNING
+            TARIK & LEPAS BERKAS ATAU FOLDER LOKAL KE SINI UNTUK SCANNING
           </div>
           <div style="font-size: 13px; color: rgba(0,242,254,0.7);">
-            Mendukung pemindaian file aplikasi (.exe, .dll, .apk, .js, .py), dokumen (.pdf, .docx, .zip), dan folder sistem komputer.
+            ${prof.dropzoneHint}
           </div>
         </div>
 
@@ -5995,8 +6750,8 @@ function renderAvTabContent(tabId) {
                 <div>Kecepatan: <b style="color: var(--neon-purple);" id="avScanSpeed">${avScanState.scanSpeed} file/s</b></div>
                 <div>Ancaman: <b style="color: var(--neon-red);" id="avThreatsFoundCount">${avScanState.threatsFound.length}</b></div>
               </div>
-              <div style="font-family: var(--font-mono); font-size: 14px; color: rgba(0,242,254,0.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="avCurrentFilePath">
-                Path: ${avScanState.currentFile || 'Menyiapkan mesin scan...'}
+              <div style="font-family: var(--font-mono); font-size: 13.5px; color: rgba(0,242,254,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="avCurrentFilePath">
+                Path: ${avScanState.currentFile || 'Menyiapkan pemindaian target storage...'}
               </div>
             </div>
           </div>
@@ -6005,17 +6760,17 @@ function renderAvTabContent(tabId) {
           </div>
         </div>
 
-        <!-- Scan Results Table (If any threats found) -->
+        <!-- Scan Results Table -->
         <div id="avResultsTableBox" style="margin-top: 14px; display: ${avScanState.threatsFound.length > 0 ? 'block' : 'none'};">
           <div style="font-family: var(--font-hud); font-size: 13px; color: var(--neon-red); margin-bottom: 6px;">
-            <i class="fa-solid fa-triangle-exclamation"></i> HASIL DETEKSI ANCAMAN
+            <i class="fa-solid fa-triangle-exclamation"></i> HASIL DETEKSI ANCAMAN PADA ${prof.displayName.toUpperCase()}
           </div>
           <div style="overflow-x: auto;">
             <table class="gov-table">
               <thead>
                 <tr>
                   <th>NAMA FILE</th>
-                  <th>JALUR DIREKTORI</th>
+                  <th>JALUR LOKASI</th>
                   <th>IDENTIFIKASI ANCAMAN</th>
                   <th>TINGKAT BAHAYA</th>
                   <th>TINDAKAN REKOMENDASI</th>
@@ -6025,11 +6780,11 @@ function renderAvTabContent(tabId) {
                 ${avScanState.threatsFound.map((t, idx) => `
                   <tr>
                     <td><b>${t.name}</b></td>
-                    <td style="font-family: var(--font-mono); font-size: 14px;">${t.path}</td>
+                    <td style="font-family: var(--font-mono); font-size: 12.5px;">${t.path}</td>
                     <td style="color: var(--neon-amber);"><b>${t.threat}</b></td>
                     <td><span class="threat-pill ${t.sev === 'Critical' ? 'critical' : 'high'}">${t.sev}</span></td>
                     <td>
-                      <button class="nav-btn redteam" style="padding: 3px 8px; font-size: 14px;" onclick="quarantineThreatItem(${idx})"><i class="fa-solid fa-biohazard"></i> KARANTINA</button>
+                      <button class="nav-btn redteam" style="padding: 3px 8px; font-size: 13px;" onclick="quarantineThreatItem(${idx})"><i class="fa-solid fa-biohazard"></i> KARANTINA</button>
                     </td>
                   </tr>
                 `).join('')}
@@ -6041,64 +6796,65 @@ function renderAvTabContent(tabId) {
       </div>
     `;
   } else if (tabId === 'behavior') {
-    // TAB 2: ALGORITMA BEHAVIORAL & TINGKAH LAKU MENCURIGAKAN
+    // TAB 2: ALGORITMA BEHAVIORAL & TINGKAH LAKU SESUAI TARGET OS
     container.innerHTML = `
       <div class="av-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
           <div>
             <div style="font-family: var(--font-hud); font-size: 14px; font-weight: 700; color: #fff;">
-              <i class="fa-solid fa-brain glow-cyan"></i> MESIN ANALISIS BEHAVIORAL SISTEM & DRIVE
+              <i class="fa-solid fa-brain glow-cyan"></i> MESIN ANALISIS BEHAVIORAL: ${prof.displayName.toUpperCase()}
             </div>
             <div style="font-size: 13px; color: rgba(0,242,254,0.7);">
-              Memantau tingkah laku proses, panggilan kernel, modifikasi filesystem, dan injeksi memori secara real-time.
+              Memantau tingkah laku proses, syscall kernel, privilege elevation, dan akses sandbox sesuai arsitektur ${prof.badgeText}.
             </div>
           </div>
           <span class="threat-pill clean"><i class="fa-solid fa-shield-check"></i> ZERO-DAY DEFENSE: ACTIVE</span>
         </div>
 
+        <!-- Rules Grid -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin-bottom: 14px;">
-          ${behavioralRules.map(r => `
+          ${prof.behavioralRules.map(r => `
             <div style="background: rgba(0, 20, 40, 0.7); border: 1px solid rgba(0,242,254,0.2); border-radius: 8px; padding: 10px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <b style="font-family: var(--font-hud); font-size: 14px; color: #fff;">${r.name}</b>
+                <b style="font-family: var(--font-hud); font-size: 13px; color: #fff;">${r.name}</b>
                 <span class="threat-pill clean">${r.status}</span>
               </div>
               <div style="font-size: 12.5px; color: rgba(0,242,254,0.8); margin-bottom: 4px;"><b>Pemicu:</b> ${r.trigger}</div>
-              <div style="font-size: 14px; color: var(--neon-amber); font-family: var(--font-mono);">Aksi Otomatis: ${r.action}</div>
+              <div style="font-size: 12.5px; color: var(--neon-amber); font-family: var(--font-mono);">Aksi: ${r.action}</div>
             </div>
           `).join('')}
         </div>
 
-        <!-- Interactive Behavioral Attack Simulator -->
+        <!-- Interactive Behavioral Attack Simulator for this OS -->
         <div style="background: rgba(0, 10, 24, 0.85); border: 1px solid rgba(255, 71, 87, 0.3); border-radius: 10px; padding: 12px;">
           <div style="font-family: var(--font-hud); font-size: 13px; color: var(--neon-red); margin-bottom: 8px;">
-            <i class="fa-solid fa-vial-virus"></i> SIMULATOR UJI RESPON BEHAVIORAL (SANDBOX TEST)
+            <i class="fa-solid fa-vial-virus"></i> SIMULATOR UJI RESPON BEHAVIORAL (${prof.badgeText})
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('ransomware')">UJI TINGKAH LAKU RANSOMWARE</button>
-            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('injection')">UJI INJEKSI MEMORI DLL</button>
-            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('keylogger')">UJI KEYLOGGER POLLING</button>
-            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('revshell')">UJI REVERSE SHELL SOCKET</button>
+            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('ransomware')">${prof.simAttacks.ransomware.title}</button>
+            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('injection')">${prof.simAttacks.injection.title}</button>
+            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('keylogger')">${prof.simAttacks.keylogger.title}</button>
+            <button class="nav-btn redteam" onclick="simulateBehavioralAttack('revshell')">${prof.simAttacks.revshell.title}</button>
           </div>
           <div class="code-inspector-box" id="avBehavioralConsole" style="height: 100px;">
-[BEHAVIORAL_ENGINE] Real-time heuristic watcher initialized.
-[STATUS] Monitoring drive sectors C: & D:, memory pool, and API hooks.
-[READY] Jalankan simulasi di atas untuk melihat respon pemblokiran otomatis.
+[BEHAVIORAL_ENGINE] Active profile: ${prof.displayName} (${prof.badgeText}).
+[STATUS] Monitoring ${prof.storageTarget}, process memory, and security hooks.
+[READY] Jalankan simulasi serangan di atas untuk menguji ketahanan interceptor.
           </div>
         </div>
       </div>
     `;
   } else if (tabId === 'db') {
-    // TAB 3: DATABASE VIRUS DUNIA (GLOBAL THREAT INTELLIGENCE)
+    // TAB 3: DATABASE VIRUS DUNIA LENGKAP
     container.innerHTML = `
       <div class="av-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px;">
           <div>
             <div style="font-family: var(--font-hud); font-size: 14px; font-weight: 700; color: #fff;">
-              <i class="fa-solid fa-globe glow-cyan"></i> DATABASE VIRUS & ANCAMAN SIBER GLOBAL
+              <i class="fa-solid fa-globe glow-cyan"></i> DATABASE VIRUS & ANCAMAN SIBER MULTI-PLATFORM
             </div>
             <div style="font-size: 13px; color: rgba(0,242,254,0.7);">
-              Definisi v2026.08.24-Enterprise • 4,829,140 Signature Terindeks • Sinkronisasi Cloud Live
+              Mencakup Android, iOS/iPadOS, macOS, Linux & Windows • 4,829,140 Signature Terindeks
             </div>
           </div>
           <button class="nav-btn av-shield" onclick="updateVirusDefinitions()">
@@ -6107,7 +6863,7 @@ function renderAvTabContent(tabId) {
         </div>
 
         <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-          <input type="text" class="chat-input-field" id="avVirusSearchInput" placeholder="Cari nama virus, signature family, CVE ID, atau hash SHA-256..." style="flex: 1; font-size: 13.5px; padding: 6px 12px;" oninput="filterVirusDb()">
+          <input type="text" class="chat-input-field" id="avVirusSearchInput" placeholder="Cari virus, platform, CVE, atau hash..." style="flex: 1; font-size: 13.5px; padding: 6px 12px;" oninput="filterVirusDb()">
         </div>
 
         <div style="overflow-x: auto; max-height: 380px;">
@@ -6115,11 +6871,11 @@ function renderAvTabContent(tabId) {
             <thead>
               <tr>
                 <th>NAMA ANCAMAN</th>
-                <th>KLASIFIKASI KELUARGA</th>
-                <th>CVE / STANDAR ATT&CK</th>
+                <th>KELUARGA / PLATFORM</th>
+                <th>CVE / ATT&CK</th>
                 <th>TINGKAT BAHAYA</th>
                 <th>POLA TINGKAH LAKU & DAMPAK</th>
-                <th>HASH REPUTASI (MD5/SHA256)</th>
+                <th>HASH REPUTASI</th>
               </tr>
             </thead>
             <tbody id="avVirusTableBody">
@@ -6127,10 +6883,10 @@ function renderAvTabContent(tabId) {
                 <tr>
                   <td style="font-family: var(--font-hud); font-weight: 700; color: #fff;">${v.name}</td>
                   <td style="color: var(--cyan); font-family: var(--font-mono); font-size: 12.5px;">${v.family}</td>
-                  <td style="font-family: var(--font-mono); font-size: 14px; color: var(--neon-amber);">${v.cve}</td>
+                  <td style="font-family: var(--font-mono); font-size: 13px; color: var(--neon-amber);">${v.cve}</td>
                   <td><span class="threat-pill ${v.sev === 'Critical' ? 'critical' : 'high'}">${v.sev}</span></td>
                   <td style="font-size: 13px; line-height: 1.4;">${v.desc}</td>
-                  <td style="font-family: var(--font-mono); font-size: 13.5px; color: rgba(0,242,254,0.6);">${v.hash}</td>
+                  <td style="font-family: var(--font-mono); font-size: 13px; color: rgba(0,242,254,0.6);">${v.hash}</td>
                 </tr>
               `).join('')}
             </tbody>
@@ -6139,20 +6895,20 @@ function renderAvTabContent(tabId) {
       </div>
     `;
   } else if (tabId === 'quarantine') {
-    // TAB 4: KARANTINA & LAPORAN
+    // TAB 4: KARANTINA & LAPORAN MULTI-OS
     container.innerHTML = `
       <div class="av-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px;">
           <div>
             <div style="font-family: var(--font-hud); font-size: 14px; font-weight: 700; color: #fff;">
-              <i class="fa-solid fa-biohazard glow-amber" style="color: var(--neon-amber);"></i> QUARANTINE VAULT (BRANKAS ISOLASI)
+              <i class="fa-solid fa-biohazard glow-amber" style="color: var(--neon-amber);"></i> QUARANTINE VAULT (ISOLASI ANCAMAN)
             </div>
             <div style="font-size: 13px; color: rgba(0,242,254,0.7);">
               Berkas terinfeksi diisolasi dalam sandbox terenkripsi dan dinonaktifkan eksekusinya.
             </div>
           </div>
           <div style="display: flex; gap: 6px;">
-            <button class="nav-btn" onclick="exportAntivirusReport('json')"><i class="fa-solid fa-download"></i> EXPORT LAPORAN (JSON)</button>
+            <button class="nav-btn" onclick="exportAntivirusReport('json')"><i class="fa-solid fa-download"></i> EXPORT (JSON)</button>
             <button class="nav-btn" onclick="exportAntivirusReport('csv')"><i class="fa-solid fa-file-csv"></i> EXPORT (CSV)</button>
           </div>
         </div>
@@ -6173,15 +6929,15 @@ function renderAvTabContent(tabId) {
               ${quarantineVault.map((q, idx) => `
                 <tr>
                   <td style="font-family: var(--font-mono); font-weight: 700; color: var(--cyan);">${q.id}</td>
-                  <td style="font-family: var(--font-mono); font-size: 12.5px;">${q.file}</td>
+                  <td style="font-family: var(--font-mono); font-size: 12px;">${q.file}</td>
                   <td style="color: var(--neon-amber); font-weight: 600;">${q.threat}</td>
-                  <td style="font-family: var(--font-mono); font-size: 14px;">${q.date}</td>
+                  <td style="font-family: var(--font-mono); font-size: 13px;">${q.date}</td>
                   <td><span class="threat-pill ${q.sev === 'Critical' ? 'critical' : 'high'}">${q.sev}</span></td>
                   <td>
                     <div style="display: flex; gap: 4px;">
-                      <button class="nav-btn redteam" style="padding: 2px 6px; font-size: 14px;" onclick="deleteQuarantinedItem(${idx})"><i class="fa-solid fa-trash"></i> HAPUS</button>
-                      <button class="nav-btn" style="padding: 2px 6px; font-size: 14px;" onclick="restoreQuarantinedItem(${idx})"><i class="fa-solid fa-rotate-left"></i> PULIHKAN</button>
-                      <button class="nav-btn gov" style="padding: 2px 6px; font-size: 14px;" onclick="whitelistQuarantinedItem(${idx})"><i class="fa-solid fa-check"></i> WHITELIST</button>
+                      <button class="nav-btn redteam" style="padding: 2px 6px; font-size: 13px;" onclick="deleteQuarantinedItem(${idx})"><i class="fa-solid fa-trash"></i> HAPUS</button>
+                      <button class="nav-btn" style="padding: 2px 6px; font-size: 13px;" onclick="restoreQuarantinedItem(${idx})"><i class="fa-solid fa-rotate-left"></i> PULIHKAN</button>
+                      <button class="nav-btn gov" style="padding: 2px 6px; font-size: 13px;" onclick="whitelistQuarantinedItem(${idx})"><i class="fa-solid fa-check"></i> WHITELIST</button>
                     </div>
                   </td>
                 </tr>
@@ -6196,21 +6952,21 @@ function renderAvTabContent(tabId) {
     container.innerHTML = `
       <div class="av-card">
         <div style="font-family: var(--font-hud); font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 10px;">
-          <i class="fa-solid fa-shield-halved glow-cyan"></i> PENGATURAN PROTEKSI REAL-TIME & DRIVE DEFENSE
+          <i class="fa-solid fa-shield-halved glow-cyan"></i> PENGATURAN REAL-TIME SHIELD & MULTI-OS DEFENSE
         </div>
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
           <div style="background: rgba(0, 20, 40, 0.6); padding: 12px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <b>Real-Time File System Shield</b>
+              <b>Adaptive OS Storage Shield</b>
               <input type="checkbox" checked style="accent-color: var(--neon-green); transform: scale(1.2);">
             </div>
-            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Pemindaian otomatis setiap kali file dibuka, disalin, atau diunduh ke drive.</div>
+            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">${prof.shieldDesc}</div>
           </div>
 
           <div style="background: rgba(0, 20, 40, 0.6); padding: 12px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <b>AI Behavioral Heuristic Guard</b>
+              <b>AI Behavioral Zero-Day Guard</b>
               <input type="checkbox" checked style="accent-color: var(--neon-green); transform: scale(1.2);">
             </div>
             <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Mencegat pola aktivitas berbahaya yang belum terdaftar di database signature.</div>
@@ -6218,10 +6974,10 @@ function renderAvTabContent(tabId) {
 
           <div style="background: rgba(0, 20, 40, 0.6); padding: 12px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <b>Auto-Scan USB & Drive Eksternal</b>
+              <b>Auto-Scan USB / OTG / External Storage</b>
               <input type="checkbox" checked style="accent-color: var(--neon-green); transform: scale(1.2);">
             </div>
-            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Memindai flashdisk dan media penyimpanan eksternal saat pertama kali terpasang.</div>
+            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Memindai flashdisk, SD card, dan media OTG saat pertama kali terhubung.</div>
           </div>
 
           <div style="background: rgba(0, 20, 40, 0.6); padding: 12px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
@@ -6229,12 +6985,12 @@ function renderAvTabContent(tabId) {
               <b>Cloud Sandbox & Threat Intelligence</b>
               <input type="checkbox" checked style="accent-color: var(--neon-green); transform: scale(1.2);">
             </div>
-            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Sinkronisasi pola ancaman global secara otomatis via jaringan cloud terenkripsi.</div>
+            <div style="font-size: 12.5px; color: rgba(0,242,254,0.7);">Sinkronisasi pola ancaman global secara otomatis via jaringan terenkripsi.</div>
           </div>
         </div>
 
         <div style="margin-top: 14px;">
-          <button class="nav-btn gov" onclick="alert('Pengaturan proteksi Antivirus berhasil diperbarui.')">
+          <button class="nav-btn gov" onclick="alert('Pengaturan proteksi Antivirus Multi-OS berhasil diperbarui.')">
             <i class="fa-solid fa-save"></i> SIMPAN KONFIGURASI ANTIVIRUS
           </button>
         </div>
@@ -6243,7 +6999,7 @@ function renderAvTabContent(tabId) {
   }
 }
 
-/* SCANNING IMPLEMENTATION & FILE SYSTEM HANDLERS */
+/* SCANNING IMPLEMENTATION & ADAPTIVE FILE SYSTEM HANDLERS */
 function triggerFolderPicker() {
   playSfx('click');
   const input = document.getElementById('avFolderInput');
@@ -6300,11 +7056,13 @@ function processScannedFileList(fileList, sourceName) {
   avScanState.threatsFound = [];
   avScanState.progress = 0;
 
+  const prof = getActiveOSProfile();
+
   const progArea = document.getElementById('avScanningProgressArea');
   if (progArea) progArea.style.display = 'block';
 
   const typeLabel = document.getElementById('avScanTypeLabel');
-  if (typeLabel) typeLabel.textContent = `MEMINDAI ${sourceName.toUpperCase()} (${fileList.length} BERKAS)...`;
+  if (typeLabel) typeLabel.textContent = `MEMINDAI ${sourceName.toUpperCase()} (${fileList.length} BERKAS - ${prof.badgeText})...`;
 
   let idx = 0;
   clearInterval(avScanState.timer);
@@ -6322,17 +7080,24 @@ function processScannedFileList(fileList, sourceName) {
     avScanState.progress = Math.min(100, Math.floor((avScanState.scannedFiles / fileList.length) * 100));
     avScanState.scanSpeed = Math.floor(180 + Math.random() * 220);
 
-    // Heuristic & Signature check on file
+    // Heuristic & Signature check on file adapted to platform
     const lowerName = file.name.toLowerCase();
-    const isDoubleExt = /\.(pdf|docx|xlsx|jpg|png|txt)\.(exe|scr|bat|vbs|ps1|com)$/i.test(lowerName);
-    const isSuspiciousExt = /\.(exe|scr|bat|vbs|ps1|pif|cmd)$/i.test(lowerName);
-    const isSuspiciousKeyword = /(mimikatz|payload|hack|ransom|trojan|miner|keygen|crack)/i.test(lowerName);
+    const isDoubleExt = /\\.(pdf|docx|xlsx|jpg|png|txt)\\.(exe|scr|bat|vbs|ps1|apk|dex|sh)$/i.test(lowerName);
+    const isSuspiciousExt = /\\.(exe|scr|bat|vbs|ps1|apk|dex|dylib|so|elf|deb|rpm)$/i.test(lowerName);
+    const isSuspiciousKeyword = /(mimikatz|payload|hack|ransom|trojan|miner|keygen|crack|shlayer|flubot|sharkbot)/i.test(lowerName);
 
     if (isDoubleExt || (isSuspiciousExt && isSuspiciousKeyword)) {
+      let threatName = "Malware.Generic.SuspiciousBinary";
+      if (prof.key === 'android') threatName = "Trojan-Dropper.AndroidOS.Agent.APK";
+      else if (prof.key === 'ios' || prof.key === 'ipados') threatName = "Exploit.iOS.UntrustedPayload";
+      else if (prof.key === 'macos') threatName = "Trojan.OSX.Shlayer.Dropper";
+      else if (prof.key === 'linux') threatName = "Trojan.Linux.XorDDOS";
+      else if (prof.key === 'windows') threatName = "Trojan.Win32.DoubleExtension.Heuristic";
+
       avScanState.threatsFound.push({
         name: file.name,
-        path: file.webkitRelativePath || `C:\\Users\\Downloads\\${file.name}`,
-        threat: isDoubleExt ? "Trojan.Win32.DoubleExtension.Heuristic" : "Malware.Suspicious.BinaryExecutable",
+        path: file.webkitRelativePath || `${prof.storageTarget.split(' ')[0]}/${file.name}`,
+        threat: threatName,
         sev: isDoubleExt ? "Critical" : "High"
       });
       playSfx('alert');
@@ -6345,30 +7110,15 @@ function processScannedFileList(fileList, sourceName) {
 
 function startQuickScan() {
   playSfx('click');
-  const mockSystemFiles = [
-    "C:\\Windows\\System32\\ntoskrnl.exe",
-    "C:\\Windows\\System32\\drivers\\etc\\hosts",
-    "C:\\Windows\\System32\\svchost.exe",
-    "C:\\Windows\\explorer.exe",
-    "C:\\Program Files\\Common Files\\system.dll",
-    "C:\\Users\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\helper.vbs",
-    "C:\\Windows\\System32\\cmd.exe",
-    "C:\\Windows\\System32\\powershell.exe",
-    "C:\\Windows\\System32\\lsass.exe",
-    "C:\\Windows\\System32\\winlogon.exe"
-  ];
-  runSimulatedScan(mockSystemFiles, "Quick System Scan");
+  const prof = getActiveOSProfile();
+  runSimulatedScan(prof.quickFiles, prof.quickScanTitle);
 }
 
 function startFullDriveScan() {
   playSfx('click');
-  let mockDriveFiles = [];
-  for (let i = 1; i <= 60; i++) {
-    mockDriveFiles.push(`C:\\Windows\\System32\\lib_core_${i}.dll`);
-    mockDriveFiles.push(`D:\\Engineering_Projects_2026\\WayApuDam\\seepage_data_${i}.csv`);
-    mockDriveFiles.push(`D:\\Software\\Civil3D\\bin\\solver_fem_${i}.exe`);
-  }
-  runSimulatedScan(mockDriveFiles, "Full Drive Scan (C: & D:)");
+  const prof = getActiveOSProfile();
+  const fullFiles = prof.fullFilesGenerator();
+  runSimulatedScan(fullFiles, prof.fullScanTitle);
 }
 
 function runSimulatedScan(fileList, title) {
@@ -6377,11 +7127,13 @@ function runSimulatedScan(fileList, title) {
   avScanState.threatsFound = [];
   avScanState.progress = 0;
 
+  const prof = getActiveOSProfile();
+
   const progArea = document.getElementById('avScanningProgressArea');
   if (progArea) progArea.style.display = 'block';
 
   const typeLabel = document.getElementById('avScanTypeLabel');
-  if (typeLabel) typeLabel.textContent = `MEMINDAI ${title.toUpperCase()}...`;
+  if (typeLabel) typeLabel.textContent = `MEMINDAI ${title.toUpperCase()} [${prof.badgeText}]...`;
 
   let idx = 0;
   clearInterval(avScanState.timer);
@@ -6425,23 +7177,25 @@ function finishScan(title) {
   updateScanUI();
   playSfx('success');
 
+  const prof = getActiveOSProfile();
+
   const pBar = document.getElementById('avScanProgressBar');
   if (pBar) pBar.style.width = '100%';
 
   const typeLabel = document.getElementById('avScanTypeLabel');
-  if (typeLabel) typeLabel.textContent = `PEMINDAIAN SELESAI (${title})`;
+  if (typeLabel) typeLabel.textContent = `PEMINDAIAN SELESAI (${title} - ${prof.badgeText})`;
 
   const resBox = document.getElementById('avResultsTableBox');
   if (resBox) {
     resBox.style.display = avScanState.threatsFound.length > 0 ? 'block' : 'none';
   }
 
-  addAuditLogEntry(`Antivirus ${title}`, `Scan selesai: ${avScanState.scannedFiles} file dipindai, ${avScanState.threatsFound.length} ancaman ditemukan`, avScanState.threatsFound.length > 0 ? "High" : "Low");
+  addAuditLogEntry(`Antivirus Scan (${prof.displayName})`, `${title} selesai: ${avScanState.scannedFiles} file diperiksa, ${avScanState.threatsFound.length} ancaman ditemukan`, avScanState.threatsFound.length > 0 ? "High" : "Low");
 
   if (avScanState.threatsFound.length > 0) {
-    alert(`Pemindaian Selesai! Ditemukan ${avScanState.threatsFound.length} ancaman mencurigakan. Silakan periksa daftar ancaman untuk karantina.`);
+    alert(`Pemindaian Selesai! Ditemukan ${avScanState.threatsFound.length} ancaman pada sistem ${prof.displayName}. Silakan periksa daftar untuk karantina.`);
   } else {
-    alert(`Pemindaian Selesai! Seluruh ${avScanState.scannedFiles} berkas bersih dari virus dan ancaman.`);
+    alert(`Pemindaian Selesai! Seluruh ${avScanState.scannedFiles} berkas pada sistem ${prof.displayName} bersih dari virus dan malware.`);
   }
 }
 
@@ -6459,8 +7213,10 @@ function quarantineThreatItem(idx) {
   const t = avScanState.threatsFound[idx];
   if (!t) return;
 
+  const prof = getActiveOSProfile();
+
   quarantineVault.unshift({
-    id: "Q-" + String(Math.floor(100 + Math.random() * 900)),
+    id: `Q-${prof.key.toUpperCase()}-${Math.floor(100 + Math.random() * 900)}`,
     file: t.path,
     threat: t.threat,
     date: new Date().toISOString().substring(0, 16).replace('T', ' '),
@@ -6470,7 +7226,7 @@ function quarantineThreatItem(idx) {
 
   avScanState.threatsFound.splice(idx, 1);
   renderAvTabContent('scan');
-  addAuditLogEntry("File Quarantined", `Berkas ${t.name} diisolasi ke Quarantine Vault`, "High");
+  addAuditLogEntry("File Quarantined", `Berkas ${t.name} (${prof.displayName}) diisolasi ke Quarantine Vault`, "High");
   alert(`Berkas '${t.name}' telah berhasil diisolasi ke dalam Quarantine Vault.`);
 }
 
@@ -6506,38 +7262,18 @@ function simulateBehavioralAttack(type) {
   const consoleEl = document.getElementById('avBehavioralConsole');
   if (!consoleEl) return;
 
+  const prof = getActiveOSProfile();
   const ts = new Date().toISOString().substring(11, 19);
-  let logText = "";
+  const attackInfo = prof.simAttacks[type] || { title: "UJI SERANGAN", log: `[THREAT_INTERCEPT] Anomaly detected on ${prof.displayName}\\n[ACTION] Process isolated.\\n[STATUS] SECURE.` };
 
-  if (type === 'ransomware') {
-    logText = `[${ts}] [HEURISTIC_TRIGGER] Process PID #4921 (crypt_worker.exe) attempting bulk file rename (*.wncry)\n` +
-              `[${ts}] [BEHAVIOR_RULE: BEH-01] Mass-encryption pattern DETECTED (52 files/sec)\n` +
-              `[${ts}] [MITIGATION] PID #4921 TERMINATED IMMEDIATELY ◈ Target folder locked in safe mode.\n` +
-              `[${ts}] [RESULT] Status: RANSOMWARE NEUTRALIZED ◈ Zero Files Encrypted.`;
-  } else if (type === 'injection') {
-    logText = `[${ts}] [HEURISTIC_TRIGGER] Process PID #2104 attempting VirtualAllocEx on svchost.exe (DLL Hollow)\n` +
-              `[${ts}] [BEHAVIOR_RULE: BEH-02] Process Injection Signature MATCHED\n` +
-              `[${ts}] [MITIGATION] Memory write BLOCKED ◈ Process PID #2104 ISOLATED in Sandbox.\n` +
-              `[${ts}] [RESULT] Status: INJECTION BLOCKED ◈ System Integrity Maintained.`;
-  } else if (type === 'keylogger') {
-    logText = `[${ts}] [HEURISTIC_TRIGGER] Background service hook calling SetWindowsHookEx (WH_KEYBOARD_LL)\n` +
-              `[${ts}] [BEHAVIOR_RULE: BEH-04] Unauthorized Keystroke Intercept DETECTED\n` +
-              `[${ts}] [MITIGATION] Hook DETACHED ◈ Keylogger payload quarantined.\n` +
-              `[${ts}] [RESULT] Status: KEYLOGGER INTERCEPTED.`;
-  } else if (type === 'revshell') {
-    logText = `[${ts}] [HEURISTIC_TRIGGER] Outbound TCP handshake to 185.220.101.4:4444 (Known C2 Subnet)\n` +
-              `[${ts}] [BEHAVIOR_RULE: BEH-05] Reverse Shell Payload MATCHED\n` +
-              `[${ts}] [MITIGATION] Firewall Packet DROPPED ◈ Remote C2 IP Blacklisted.\n` +
-              `[${ts}] [RESULT] Status: C2 BEACONING TERMINATED.`;
-  }
-
-  consoleEl.textContent = logText;
-  addAuditLogEntry(`Antivirus Behavioral Test: ${type.toUpperCase()}`, "Simulated heuristic attack intercepted", "High");
+  const formattedLog = `[${ts}] ${attackInfo.log.replace(/\\\\n/g, '\\n')}`;
+  consoleEl.textContent = formattedLog;
+  addAuditLogEntry(`Antivirus Behavioral Test: ${attackInfo.title} (${prof.displayName})`, "Simulated heuristic attack intercepted", "High");
 }
 
 function updateVirusDefinitions() {
   playSfx('success');
-  alert("Sinkronisasi Cloud Berhasil! Definisi virus diperbarui ke versi v2026.08.24-Enterprise (4,829,140 signatures).");
+  alert("Sinkronisasi Cloud Berhasil! Definisi virus multi-platform diperbarui ke versi v2026.08.24-Enterprise (4,829,140 signatures: Android, iOS/iPadOS, macOS, Linux, Windows).");
 }
 
 function filterVirusDb() {
@@ -6556,26 +7292,29 @@ function filterVirusDb() {
     <tr>
       <td style="font-family: var(--font-hud); font-weight: 700; color: #fff;">${v.name}</td>
       <td style="color: var(--cyan); font-family: var(--font-mono); font-size: 12.5px;">${v.family}</td>
-      <td style="font-family: var(--font-mono); font-size: 14px; color: var(--neon-amber);">${v.cve}</td>
+      <td style="font-family: var(--font-mono); font-size: 13px; color: var(--neon-amber);">${v.cve}</td>
       <td><span class="threat-pill ${v.sev === 'Critical' ? 'critical' : 'high'}">${v.sev}</span></td>
       <td style="font-size: 13px; line-height: 1.4;">${v.desc}</td>
-      <td style="font-family: var(--font-mono); font-size: 13.5px; color: rgba(0,242,254,0.6);">${v.hash}</td>
+      <td style="font-family: var(--font-mono); font-size: 13px; color: rgba(0,242,254,0.6);">${v.hash}</td>
     </tr>
   `).join('');
 }
 
 function exportAntivirusReport(format) {
   playSfx('click');
+  const prof = getActiveOSProfile();
   let data = "";
   if (format === 'json') {
     const report = {
-      system: "JARVIS Cyber Sentinel Antivirus v8.2",
+      system: `JARVIS Cyber Sentinel Antivirus v8.2 (${prof.displayName})`,
+      platform: prof.badgeText,
+      storage_target: prof.storageTarget,
       engineer: "Ir. Mohamad Hartadi",
       timestamp: new Date().toISOString(),
       real_time_shield: "ACTIVE",
       total_definitions: 4829140,
       quarantined_items: quarantineVault,
-      behavioral_rules: behavioralRules
+      behavioral_rules: prof.behavioralRules
     };
     data = JSON.stringify(report, null, 2);
   } else {
@@ -6590,7 +7329,7 @@ function exportAntivirusReport(format) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `JARVIS_Antivirus_Report_${Date.now()}.${format}`;
+  a.download = `JARVIS_Antivirus_Report_${prof.key}_${Date.now()}.${format}`;
   a.click();
 }
 
